@@ -112,14 +112,6 @@
 
     .footer a { color: #0285FF; }
 
-    .obf-rtl {
-      unicode-bidi: bidi-override;
-      direction: rtl;
-    }
-    .obf-hide {
-      display: none;
-    }
-
     @media (max-width: 480px) {
       body { padding: 24px 16px; }
       .logo { width: 120px; height: 120px; }
@@ -141,17 +133,7 @@
       <h2>1. Agreement</h2>
       <p>By using the GoFast passenger app, the GoFast Driver app, or the GoFast admin panel (together, the "Service"), you accept these Terms. If you don't accept them, don't use the Service.</p>
       <p>By agreeing to these Terms of Service, you also agree to our <a href="./privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference and explains how we process personal data.</p>
-      <p>The Service is operated by <strong>George Lorentzos</strong>, Greece (the "Operator", "we", "us"). Contact:
-        <a class="contact-email" href="#"
-           data-u="&#103;&#101;&#111;&#114;&#103;&#101;&#108;&#111;&#114;&#101;&#110;&#116;&#122;&#111;&#115;"
-           data-d="&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;">
-          <span class="obf-rtl">moc.duolci&#64;sozt&shy;nerolegroeg</span><span class="obf-hide">no-bot@example.invalid</span>
-        </a>,
-        <a class="contact-phone" href="#"
-           data-p="&#43;&#51;&#48;&#54;&#57;&#52;&#53;&#57;&#57;&#53;&#54;&#48;&#51;">
-          <span class="obf-rtl">3065&shy;995 496 03+</span><span class="obf-hide">+0 000 000 0000</span>
-        </a>.
-      </p>
+      <p>The Service is operated by <strong>George Lorentzos</strong>, Greece (the "Operator", "we", "us"). Contact: <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a>, +30 694 599 5603.</p>
 
       <h2>2. About the Service</h2>
       <div class="notice">
@@ -234,12 +216,7 @@
       <p>The "GoFast" name, the logo, the apps, and all server-side software are owned by George Lorentzos. You receive a limited, revocable, non-exclusive, non-transferable licence to install and use the apps for their intended purpose. No other rights are granted. You may not copy, modify, distribute, sell, or rent any part of the Service.</p>
 
       <h2>13. Termination</h2>
-      <p>You may stop using the Service at any time. Drivers may request account deletion by emailing
-        <a class="contact-email" href="#"
-           data-u="&#103;&#101;&#111;&#114;&#103;&#101;&#108;&#111;&#114;&#101;&#110;&#116;&#122;&#111;&#115;"
-           data-d="&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;">
-          <span class="obf-rtl">moc.duolci&#64;sozt&shy;nerolegroeg</span><span class="obf-hide">no-bot@example.invalid</span>
-        </a>. We may suspend or terminate your access immediately for breach of these Terms, fraud, or any safety risk. Sections 9, 10, 11, 12 and 14 survive termination.</p>
+      <p>You may stop using the Service at any time. Drivers may request account deletion by emailing <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a>. We may suspend or terminate your access immediately for breach of these Terms, fraud, or any safety risk. Sections 9, 10, 11, 12 and 14 survive termination.</p>
 
       <h2>14. Governing law &amp; jurisdiction</h2>
       <p>These Terms are governed by <strong>Greek law</strong>. Disputes are subject to the <strong>jurisdiction of the courts of Athens, Greece</strong>, except that consumers retain any mandatory rights to bring a claim in their country of residence under EU consumer law.</p>
@@ -251,16 +228,7 @@
       <h2>16. Contact</h2>
       <p>
         George Lorentzos · Greece<br />
-        Email:
-        <a class="contact-email" href="#"
-           data-u="&#103;&#101;&#111;&#114;&#103;&#101;&#108;&#111;&#114;&#101;&#110;&#116;&#122;&#111;&#115;"
-           data-d="&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;">
-          <span class="obf-rtl">moc.duolci&#64;sozt&shy;nerolegroeg</span><span class="obf-hide">no-bot@example.invalid</span>
-        </a> · Phone:
-        <a class="contact-phone" href="#"
-           data-p="&#43;&#51;&#48;&#54;&#57;&#52;&#53;&#57;&#57;&#53;&#54;&#48;&#51;">
-          <span class="obf-rtl">3065&shy;995 496 03+</span><span class="obf-hide">+0 000 000 0000</span>
-        </a>
+        Email: <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a> · Phone: +30 694 599 5603
       </p>
     </section>
 
@@ -269,45 +237,5 @@
       <a href="https://go-fast.app/privacy">Privacy Policy</a>
     </div>
   </main>
-
-  <script>
-    (function () {
-      function buildEmail(a) {
-        var u = a.getAttribute('data-u') || '';
-        var d = a.getAttribute('data-d') || '';
-        return u + String.fromCharCode(64) + d;
-      }
-      function buildPhone(a) {
-        return (a.getAttribute('data-p') || '').replace(/\s+/g, '');
-      }
-      function activate() {
-        document.querySelectorAll('a.contact-email').forEach(function (a) {
-          var addr = buildEmail(a);
-          a.setAttribute('href', 'ma' + 'ilto:' + addr);
-          a.innerHTML = '';
-          a.appendChild(document.createTextNode(addr));
-        });
-        document.querySelectorAll('a.contact-phone').forEach(function (a) {
-          var num = buildPhone(a);
-          a.setAttribute('href', 't' + 'el:' + num);
-          a.innerHTML = '';
-          a.appendChild(document.createTextNode(num));
-        });
-      }
-      var armed = false;
-      function arm() {
-        if (armed) return;
-        armed = true;
-        ['mousemove', 'scroll', 'touchstart', 'keydown', 'click'].forEach(function (ev) {
-          window.removeEventListener(ev, arm, true);
-        });
-        activate();
-      }
-      ['mousemove', 'scroll', 'touchstart', 'keydown', 'click'].forEach(function (ev) {
-        window.addEventListener(ev, arm, { capture: true, passive: true });
-      });
-      setTimeout(arm, 8000);
-    })();
-  </script>
 </body>
 </html>
