@@ -185,8 +185,8 @@
       <p>The passenger app does not require registration. We do not collect, store, or persist any personal data about passengers on our servers. Specifically:</p>
       <ul>
         <li>No name, email, phone number or account is collected from passengers.</li>
-        <li>When you tap "find a driver", your device sends its current GPS coordinates (latitude/longitude) to our server <strong>only at the moment of the request</strong>. We use the coordinates to find the nearest online driver and immediately discard them. They are <strong>not stored</strong> in any database or log.</li>
-        <li>The server then returns the nearest driver's first name and phone number to your app, so you can call the driver directly.</li>
+        <li>Your GPS coordinates (latitude/longitude) <strong>never leave your device</strong>. The matching of the nearest driver happens entirely on your phone — we do not receive, process, or store your location at any time.</li>
+        <li>Our server only provides the app with the list of currently online drivers and their published locations, first names, and phone numbers. Your device then selects the nearest driver locally so you can call them directly.</li>
         <li>Standard server logs (IP address, request path, timestamp, user-agent) are kept temporarily for security and abuse prevention, and rotated regularly.</li>
       </ul>
 
