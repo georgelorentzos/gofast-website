@@ -58,7 +58,7 @@
             width: 300px;
             height: 620px;
             background: url("assets/images/phone.png") no-repeat center center;
-            background-size: contain;
+            background-size: cover;
             animation: float 6s ease-in-out infinite;
             filter: drop-shadow(0 10px 25px rgba(0, 17, 34, 0.12));
         }
@@ -80,15 +80,6 @@
         .toggle-icon {
             transition: transform 0.3s ease;
             display: inline-block;
-        }
-
-        @media (max-width: 768px) {
-            .phone-mockup {
-                width: 260px;
-                height: 480px;
-                -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 88%);
-                mask-image: linear-gradient(to bottom, black 0%, transparent 88%);
-            }
         }
 
         .opacity-0-init { opacity: 0; }
