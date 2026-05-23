@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFast — Coming Soon to Android</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/mascot.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                        brand: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#001122',
+                            blue: '#0099ff',
+                            sky: '#00b4ff',
+                        }
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        }
+                    },
+                    animation: {
+                        fadeUp: 'fadeUp 0.7s ease forwards',
+                        float: 'float 6s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scrollbar-width: none; }
+        html::-webkit-scrollbar { display: none; }
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-display { font-family: 'Sora', sans-serif; }
+        .font-brand { font-family: 'Roboto', sans-serif; }
+
+        .phone-mockup {
+            width: 300px;
+            height: auto;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .opacity-0-init { opacity: 0; }
+
+        @keyframes pulseSoft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+        .pulse-soft { animation: pulseSoft 2.5s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-white text-gray-500 antialiased">
+
+    <section class="min-h-screen flex items-center pt-20 pb-16 px-5">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-28">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-md opacity-0-init animate-fadeUp">
+
+                    <img src="assets/images/logo.png" alt="GoFast Logo" draggable="false" class="w-64 md:w-80 max-w-full h-auto -ml-3 md:-ml-6" />
+
+                    <div class="inline-flex items-center gap-2 bg-[#01A9D5]/10 text-[#01A9D5] font-display font-semibold text-sm px-4 py-2 rounded-full mt-2 mb-5">
+                        <i class="fa-brands fa-android"></i>
+                        Coming Soon to Android
+                    </div>
+
+                    <h1 class="font-display font-bold text-3xl md:text-4xl text-[#001122] leading-tight mb-4">
+                        <span class="font-brand font-black">GoFast</span> is launching on Android soon
+                    </h1>
+
+                    <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-xs">
+                        Not on the Play Store just yet — but it's almost here. Counting down to launch:
+                    </p>
+
+                    <div class="flex gap-3 mb-8" id="countdown">
+                        <div class="flex flex-col items-center bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-4 py-4 min-w-[72px] pulse-soft">
+                            <span class="font-display font-bold text-white text-3xl leading-none" id="days">15</span>
+                            <span class="text-white/80 text-xs mt-1 tracking-wide">Days</span>
+                        </div>
+                        <div class="flex flex-col items-center bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-4 py-4 min-w-[72px] pulse-soft">
+                            <span class="font-display font-bold text-white text-3xl leading-none" id="hours">00</span>
+                            <span class="text-white/80 text-xs mt-1 tracking-wide">Hours</span>
+                        </div>
+                        <div class="flex flex-col items-center bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-4 py-4 min-w-[72px] pulse-soft">
+                            <span class="font-display font-bold text-white text-3xl leading-none" id="minutes">00</span>
+                            <span class="text-white/80 text-xs mt-1 tracking-wide">Minutes</span>
+                        </div>
+                        <div class="flex flex-col items-center bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-4 py-4 min-w-[72px] pulse-soft">
+                            <span class="font-display font-bold text-white text-3xl leading-none" id="seconds">00</span>
+                            <span class="text-white/80 text-xs mt-1 tracking-wide">Seconds</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="block opacity-60 cursor-not-allowed pointer-events-none">
+                            <img src="assets/images/googleplay.webp" alt="Play Store — Coming Soon" class="h-11 grayscale">
+                        </a>
+                        <a href="https://ios.go-fast.app/" class="block transition-transform duration-200 hover:-translate-y-0.5">
+                            <img src="assets/images/applestore.webp" alt="App Store" class="h-11">
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-3">Already available on iOS — Android arriving shortly.</p>
+                </div>
+
+                <img src="assets/images/phone.png" alt="Phone" draggable="false" class="phone-mockup opacity-0-init animate-fadeUp flex-shrink-0" />
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // ===== SET YOUR LAUNCH DATE HERE =====
+        // 15 days from today (May 23, 2026) -> June 7, 2026 at 09:00.
+        // Change this line anytime to adjust the launch date/time.
+        const LAUNCH_DATE = new Date("2026-06-07T09:00:00");
+
+        const elDays = document.getElementById('days');
+        const elHours = document.getElementById('hours');
+        const elMinutes = document.getElementById('minutes');
+        const elSeconds = document.getElementById('seconds');
+
+        function updateCountdown() {
+            const now = new Date();
+            let diff = LAUNCH_DATE - now;
+
+            if (diff <= 0) {
+                elDays.textContent = '00';
+                elHours.textContent = '00';
+                elMinutes.textContent = '00';
+                elSeconds.textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(diff / 86400000);
+            diff -= days * 86400000;
+            const hours = Math.floor(diff / 3600000);
+            diff -= hours * 3600000;
+            const minutes = Math.floor(diff / 60000);
+            diff -= minutes * 60000;
+            const seconds = Math.floor(diff / 1000);
+
+            elDays.textContent = String(days).padStart(2, '0');
+            elHours.textContent = String(hours).padStart(2, '0');
+            elMinutes.textContent = String(minutes).padStart(2, '0');
+            elSeconds.textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
