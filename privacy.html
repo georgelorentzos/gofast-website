@@ -143,7 +143,6 @@
 
     @media (max-width: 480px) {
       body { padding: 24px 16px; }
-      .logo { width: 120px; height: 120px; }
       h1 { font-size: 22px; }
       h2 { font-size: 17px; }
     }
@@ -193,13 +192,13 @@
       <h3>b) Drivers</h3>
       <p>For each driver account we store the following in our database:</p>
       <ul>
-        <li><strong>Username</strong> (display name shown to passengers)</li>
+        <li><strong>Username</strong> (used to recognize drivers)</li>
         <li><strong>Email address</strong> (used to send the 6-digit sign-in code)</li>
         <li><strong>Phone number</strong> (shown to a passenger after a ride request, so they can call you)</li>
         <li><strong>Account flags</strong>: paid status, admin status, account creation date, account expiry date</li>
         <li><strong>Driving licence expiry date</strong> (Δίπλωμα οδήγησης — expiry date only; we do <strong>not</strong> store the licence number, a scan, or any other detail)</li>
         <li><strong>Special Taxi Driving Permit expiry date</strong> (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ — expiry date only; we do <strong>not</strong> store the permit number, a scan, or any other detail)</li>
-        <li><strong>One-time passcodes (OTPs)</strong> — temporarily stored, expire after 15 minutes, deleted immediately after use</li>
+        <li><strong>One-time passcodes (OTPs)</strong> — temporarily stored, expire after 3 minutes, deleted immediately after use</li>
         <li><strong>Authentication tokens (JWTs)</strong> — issued on successful sign-in, stored locally on the driver's device (in secure on-device storage), not stored on our servers</li>
       </ul>
       <p>While a driver is <strong>online</strong> in the Driver app, the device transmits GPS data (latitude, longitude, speed, heading) to our server every few seconds, including in the background while driving. This is necessary so passengers can see nearby drivers in real time. This location data is held <strong>only in volatile server memory</strong> with a 20-second time-to-live and is <strong>never written to a database, file, or log</strong>. When the driver goes offline, swipes the app away, or stops sending updates, the location is removed automatically.</p>
@@ -231,8 +230,7 @@
       <ul>
         <li><strong>Server hosting:</strong> Amazon Web Services, EU region (Stockholm — <em>eu-north-1</em>). The PostgreSQL database storing driver accounts and the Go application server run there.</li>
         <li><strong>Email delivery:</strong> Google (Gmail SMTP), used to send the 6-digit sign-in codes to drivers. Google receives the recipient's email address and the message contents.</li>
-        <li><strong>Maps / geolocation:</strong> MapLibre with OpenStreetMap tiles. Map tiles are loaded by your device; the tile server may receive your IP address as part of a normal HTTP request.</li>
-        <li><strong>Other users:</strong> when a passenger requests a ride, the passenger's app receives the matched driver's first name and phone number; the driver's app receives no information about the passenger (the passenger then calls the driver from their own phone).</li>
+        <li><strong>Other users:</strong> when a passenger requests a ride, the passenger's app receives the matched driver's phone number. The driver's app receives no information about the passenger (the passenger then calls the driver from their own phone).</li>
         <li><strong>Authorities:</strong> we may share data with law enforcement, tax authorities, or courts when legally required.</li>
       </ul>
       <p>We <strong>do not sell</strong> personal data. We do not run advertising. There are no analytics or tracking SDKs in the apps.</p>
@@ -243,9 +241,9 @@
       <h2>7. How long we keep data</h2>
       <ul>
         <li><strong>Driver account data</strong> — kept for as long as the account is active. After account deletion, kept up to <strong>5 years</strong> if needed to satisfy Greek tax or legal record-keeping obligations, otherwise erased.</li>
-        <li><strong>OTP codes</strong> — deleted immediately after use, or after 15 minutes if unused.</li>
+        <li><strong>OTP codes</strong> — deleted immediately after use, or after 3 minutes if unused.</li>
         <li><strong>JWT tokens</strong> — held only on the driver's device; cleared when the driver logs out or uninstalls the app.</li>
-        <li><strong>Driver live location</strong> — held in server memory only, deleted automatically after 20 seconds without an update.</li>
+        <li><strong>Driver live location</strong> — held in server memory only, deleted automatically after some time without an update.</li>
         <li><strong>Passenger location coordinates sent during a ride request</strong> — used to find the nearest driver and discarded; never written to disk.</li>
         <li><strong>Driving-licence and ΕΔΧ expiry dates</strong> — kept while the driver account is active, deleted together with the account.</li>
         <li><strong>Server access logs</strong> — typically rotated within 30 days unless needed for incident investigation.</li>
