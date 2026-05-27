@@ -5,288 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — GoFast</title>
   <link rel="icon" type="image/png" href="assets/images/mascot.png" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html, body {
-      background-color: #ffffff;
-      color: #111111;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              900: '#111111',
+              700: '#374151',
+              600: '#6b7280',
+              500: '#9ca3af',
+              200: '#e5e7eb',
+              100: '#f3f4f6',
+              50: '#f9fafb',
+            },
+            blue: {
+              500: '#0285FF',
+            }
+          },
+          spacing: {
+            '4.5': '1.125rem',
+          }
+        }
+      }
     }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-    }
-
-    .card {
-      width: 100%;
-      max-width: 720px;
-      padding: 32px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .logo {
-      width: 300px;
-      height: 300px;
-      object-fit: contain;
-    }
-
-    .heading-block {
-      width: 100%;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #111111;
-      letter-spacing: -0.4px;
-      margin-bottom: 6px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #6b7280;
-      line-height: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #111111;
-      letter-spacing: -0.3px;
-      margin-top: 32px;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #111111;
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
-
-    p, li {
-      font-size: 14px;
-      color: #374151;
-      line-height: 22px;
-      margin-bottom: 10px;
-    }
-
-    ul, ol {
-      padding-left: 22px;
-      margin-bottom: 10px;
-    }
-
-    li { margin-bottom: 6px; }
-
-    a {
-      color: #0285FF;
-      text-decoration: underline;
-    }
-
-    strong { color: #111111; font-weight: 600; }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0 16px;
-      font-size: 13px;
-    }
-
-    th, td {
-      text-align: left;
-      padding: 10px 12px;
-      border-bottom: 1px solid #e5e7eb;
-      vertical-align: top;
-    }
-
-    th {
-      font-weight: 600;
-      color: #111111;
-      background-color: #f9fafb;
-    }
-
-    td { color: #374151; line-height: 20px; }
-
-    .notice {
-      width: 100%;
-      background-color: #f3f4f6;
-      border-left: 3px solid #0285FF;
-      padding: 12px 14px;
-      border-radius: 6px;
-      margin: 12px 0;
-      font-size: 13px;
-      color: #374151;
-      line-height: 20px;
-    }
-
-    .footer {
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid #e5e7eb;
-      width: 100%;
-      font-size: 12px;
-      color: #9ca3af;
-      line-height: 18px;
-      text-align: center;
-    }
-
-    .footer a { color: #0285FF; }
-
-    @media (max-width: 480px) {
-      body { padding: 24px 16px; }
-      h1 { font-size: 22px; }
-      h2 { font-size: 17px; }
-    }
-  </style>
+  </script>
 </head>
-<body>
-  <main class="card">
-    <img class="logo" src="assets/images/logo.png" alt="GoFast" draggable="false" />
+<body class="bg-white text-gray-900 antialiased font-system">
+  <main class="w-full max-w-[720px] px-6 py-20 mx-auto flex flex-col items-center">
+    <img class="w-64 md:w-80 max-w-full h-auto -ml-3 md:-ml-6 mb-20" src="assets/images/logo.png" alt="GoFast" draggable="false" />
 
-    <div class="heading-block">
-      <h1>Privacy Policy</h1>
-      <p class="subtitle">Last updated: 4 May 2026 · Effective: 4 May 2026</p>
+    <div class="w-full mb-7">
+      <h1 class="text-2xl font-bold text-gray-900 tracking-tight mb-1.5 leading-[1.2]">Privacy Policy</h1>
+      <p class="text-sm text-gray-600 leading-5">Last updated: 4 May 2026 · Effective: 4 May 2026</p>
     </div>
 
-    <section style="width: 100%;">
-      <h2>1. Who we are</h2>
-      <p>This Privacy Policy describes how <strong>George Lorentzos</strong> ("GoFast", "we", "us", "our") processes personal data in connection with the GoFast app, the GoFast Driver app, and the GoFast admin web panel (together, the "Service").</p>
-      <p>
-        <strong>Operator:</strong> George Lorentzos (natural person, sole operator)<br />
-        <strong>Country:</strong> Greece<br />
-        <strong>Email:</strong> <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a><br />
-        <strong>Phone:</strong> +30 694 599 5603
+    <section class="w-full">
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">1. Who we are</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">This Privacy Policy describes how <strong class="font-semibold text-gray-900">George Lorentzos</strong> ("GoFast", "we", "us", "our") processes personal data in connection with the GoFast app, the GoFast Driver app, and the GoFast admin web panel (together, the "Service").</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">
+        <strong class="font-semibold text-gray-900">Operator:</strong> George Lorentzos (natural person, sole operator)<br />
+        <strong class="font-semibold text-gray-900">Country:</strong> Greece<br />
+        <strong class="font-semibold text-gray-900">Email:</strong> <a href="mailto:georgelorentzos@icloud.com" class="text-blue-500 underline">georgelorentzos@icloud.com</a><br />
+        <strong class="font-semibold text-gray-900">Phone:</strong> +30 694 599 5603
       </p>
-      <p>We comply with <strong>Regulation (EU) 2016/679 (GDPR)</strong> and Greek Law 4624/2019. For the purposes of GDPR, the data controller is George Lorentzos.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">We comply with <strong class="font-semibold text-gray-900">Regulation (EU) 2016/679 (GDPR)</strong> and Greek Law 4624/2019. For the purposes of GDPR, the data controller is George Lorentzos.</p>
 
-      <h2>2. About the Service</h2>
-      <div class="notice">
-        GoFast is a <strong>technology platform that connects passengers with independent drivers</strong>. We are <strong>not</strong> a transport carrier and do not provide transport services ourselves. Drivers are independent and operate under their own licences and insurance.
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">2. About the Service</h2>
+      <div class="w-full bg-gray-100 border-l-[3px] border-blue-500 px-3.5 py-3 rounded mb-2.5 text-xs text-gray-700 leading-5">
+        GoFast is a <strong class="font-semibold text-gray-900">technology platform that connects passengers with independent drivers</strong>. We are <strong class="font-semibold text-gray-900">not</strong> a transport carrier and do not provide transport services ourselves. Drivers are independent and operate under their own licences and insurance.
       </div>
-      <p>The Service has two distinct user groups, treated very differently:</p>
-      <ul>
-        <li><strong>Passengers</strong> — use the GoFast passenger app <strong>without registering or creating an account</strong>. The app simply shows nearby drivers and lets the passenger contact a driver directly by phone.</li>
-        <li><strong>Drivers</strong> — have accounts created and managed by an administrator. They sign in with their email and a 6-digit one-time code, then go online to share their location with nearby passengers.</li>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The Service has two distinct user groups, treated very differently:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Passengers</strong> — use the GoFast passenger app <strong class="font-semibold text-gray-900">without registering or creating an account</strong>. The app simply shows nearby drivers and lets the passenger contact a driver directly by phone.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Drivers</strong> — have accounts created and managed by an administrator. They sign in with their email and a 6-digit one-time code, then go online to share their location with nearby passengers.</li>
       </ul>
 
-      <h2>3. What data we collect</h2>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">3. What data we collect</h2>
 
-      <h3>a) Passengers (no account)</h3>
-      <p>The passenger app does not require registration. We do not collect, store, or persist any personal data about passengers on our servers. Specifically:</p>
-      <ul>
-        <li>No name, email, phone number or account is collected from passengers.</li>
-        <li>Your GPS coordinates (latitude/longitude) <strong>never leave your device</strong>. The matching of the nearest driver happens entirely on your phone — we do not receive, process, or store your location at any time.</li>
-        <li>Our server only provides the app with the list of currently online drivers and their published locations, first names, and phone numbers. Your device then selects the nearest driver locally so you can call them directly.</li>
-        <li>Standard server logs (IP address, request path, timestamp, user-agent) are kept temporarily for security and abuse prevention, and rotated regularly.</li>
+      <h3 class="text-sm font-semibold text-gray-900 mt-5 mb-2">a) Passengers (no account)</h3>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The passenger app does not require registration. We do not collect, store, or persist any personal data about passengers on our servers. Specifically:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">No name, email, phone number or account is collected from passengers.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Your GPS coordinates (latitude/longitude) <strong class="font-semibold text-gray-900">never leave your device</strong>. The matching of the nearest driver happens entirely on your phone — we do not receive, process, or store your location at any time.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Our server only provides the app with the list of currently online drivers and their published locations, first names, and phone numbers. Your device then selects the nearest driver locally so you can call them directly.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Standard server logs (IP address, request path, timestamp, user-agent) are kept temporarily for security and abuse prevention, and rotated regularly.</li>
       </ul>
 
-      <h3>b) Drivers</h3>
-      <p>For each driver account we store the following in our database:</p>
-      <ul>
-        <li><strong>Username</strong> (used to recognize drivers)</li>
-        <li><strong>Email address</strong> (used to send the 6-digit sign-in code)</li>
-        <li><strong>Phone number</strong> (shown to a passenger after a ride request, so they can call you)</li>
-        <li><strong>Account flags</strong>: paid status, admin status, account creation date, account expiry date</li>
-        <li><strong>Driving licence expiry date</strong> (Δίπλωμα οδήγησης — expiry date only; we do <strong>not</strong> store the licence number, a scan, or any other detail)</li>
-        <li><strong>Special Taxi Driving Permit expiry date</strong> (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ — expiry date only; we do <strong>not</strong> store the permit number, a scan, or any other detail)</li>
-        <li><strong>One-time passcodes (OTPs)</strong> — temporarily stored, expire after 3 minutes, deleted immediately after use</li>
-        <li><strong>Authentication tokens (JWTs)</strong> — issued on successful sign-in, stored locally on the driver's device (in secure on-device storage), not stored on our servers</li>
+      <h3 class="text-sm font-semibold text-gray-900 mt-5 mb-2">b) Drivers</h3>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">For each driver account we store the following in our database:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Username</strong> (used to recognize drivers)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Email address</strong> (used to send the 6-digit sign-in code)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Phone number</strong> (shown to a passenger after a ride request, so they can call you)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Account flags</strong>: paid status, admin status, account creation date, account expiry date</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Driving licence expiry date</strong> (Δίπλωμα οδήγησης — expiry date only; we do <strong class="font-semibold text-gray-900">not</strong> store the licence number, a scan, or any other detail)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Special Taxi Driving Permit expiry date</strong> (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ — expiry date only; we do <strong class="font-semibold text-gray-900">not</strong> store the permit number, a scan, or any other detail)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">One-time passcodes (OTPs)</strong> — temporarily stored, expire after 3 minutes, deleted immediately after use</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Authentication tokens (JWTs)</strong> — issued on successful sign-in, stored locally on the driver's device (in secure on-device storage), not stored on our servers</li>
       </ul>
-      <p>While a driver is <strong>online</strong> in the Driver app, the device transmits GPS data (latitude, longitude, speed, heading) to our server every few seconds, including in the background while driving. This is necessary so passengers can see nearby drivers in real time. This location data is held <strong>only in volatile server memory</strong> with a 20-second time-to-live and is <strong>never written to a database, file, or log</strong>. When the driver goes offline, swipes the app away, or stops sending updates, the location is removed automatically.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">While a driver is <strong class="font-semibold text-gray-900">online</strong> in the Driver app, the device transmits GPS data (latitude, longitude, speed, heading) to our server every few seconds, including in the background while driving. This is necessary so passengers can see nearby drivers in real time. This location data is held <strong class="font-semibold text-gray-900">only in volatile server memory</strong> with a 20-second time-to-live and is <strong class="font-semibold text-gray-900">never written to a database, file, or log</strong>. When the driver goes offline, swipes the app away, or stops sending updates, the location is removed automatically.</p>
 
-      <h3>c) Admin web panel</h3>
-      <p>The admin panel is used by authorised administrators (currently only the operator) to create and manage driver accounts. Admins see the same driver fields listed above. There is no separate data collected for admin users — they are also drivers with the <em>admin</em> flag.</p>
+      <h3 class="text-sm font-semibold text-gray-900 mt-5 mb-2">c) Admin web panel</h3>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The admin panel is used by authorised administrators (currently only the operator) to create and manage driver accounts. Admins see the same driver fields listed above. There is no separate data collected for admin users — they are also drivers with the <em>admin</em> flag.</p>
 
-      <h3>d) Driver document expiry tracking</h3>
-      <p>When a driver is registered, the operator records only the <strong>expiry dates</strong> of the driver's <strong>driving licence (Δίπλωμα οδήγησης)</strong> and <strong>Special Taxi Driving Permit (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ)</strong>. These two expiry dates are used to know when a driver's documents are about to lapse so the account can be deactivated in time. We do <strong>not</strong> request, upload, scan, photograph, or otherwise store copies of the licence, the ΕΔΧ, the identity card, the vehicle registration, the insurance certificate, or the ΚΤΕΟ. Drivers remain personally responsible for holding all such valid documents under Greek law (see the Terms of Service).</p>
+      <h3 class="text-sm font-semibold text-gray-900 mt-5 mb-2">d) Driver document expiry tracking</h3>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">When a driver is registered, the operator records only the <strong class="font-semibold text-gray-900">expiry dates</strong> of the driver's <strong class="font-semibold text-gray-900">driving licence (Δίπλωμα οδήγησης)</strong> and <strong class="font-semibold text-gray-900">Special Taxi Driving Permit (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ)</strong>. These two expiry dates are used to know when a driver's documents are about to lapse so the account can be deactivated in time. We do <strong class="font-semibold text-gray-900">not</strong> request, upload, scan, photograph, or otherwise store copies of the licence, the ΕΔΧ, the identity card, the vehicle registration, the insurance certificate, or the ΚΤΕΟ. Drivers remain personally responsible for holding all such valid documents under Greek law (see the Terms of Service).</p>
 
-      <h2>4. Why we process this data (legal bases under GDPR Art. 6)</h2>
-      <table>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">4. Why we process this data (legal bases under GDPR Art. 6)</h2>
+      <table class="w-full border-collapse my-3 text-xs">
         <thead>
-          <tr><th>Purpose</th><th>Legal basis</th></tr>
+          <tr>
+            <th class="text-left px-3 py-2.5 border-b border-gray-200 font-semibold text-gray-900 bg-gray-50">Purpose</th>
+            <th class="text-left px-3 py-2.5 border-b border-gray-200 font-semibold text-gray-900 bg-gray-50">Legal basis</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Create and operate driver accounts</td><td>Contract — Art. 6(1)(b)</td></tr>
-          <tr><td>Send sign-in codes by email</td><td>Contract</td></tr>
-          <tr><td>Match a passenger with the nearest online driver</td><td>Legitimate interest — Art. 6(1)(f) — operating the Service</td></tr>
-          <tr><td>Show driver name and phone to a passenger requesting a ride</td><td>Legitimate interest — enabling contact between users</td></tr>
-          <tr><td>Track driving-licence and ΕΔΧ expiry dates so accounts can be deactivated when documents lapse</td><td>Legitimate interest + legal obligation</td></tr>
-          <tr><td>Prevent fraud, abuse, or technical attacks</td><td>Legitimate interest</td></tr>
-          <tr><td>Meet tax, accounting, or legal record-keeping requirements (if monetisation begins)</td><td>Legal obligation — Art. 6(1)(c)</td></tr>
-          <tr><td>Defend against or bring legal claims</td><td>Legitimate interest</td></tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Create and operate driver accounts</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Contract — Art. 6(1)(b)</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Send sign-in codes by email</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Contract</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Match a passenger with the nearest online driver</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Legitimate interest — Art. 6(1)(f) — operating the Service</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Show driver name and phone to a passenger requesting a ride</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Legitimate interest — enabling contact between users</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Track driving-licence and ΕΔΧ expiry dates so accounts can be deactivated when documents lapse</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Legitimate interest + legal obligation</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Prevent fraud, abuse, or technical attacks</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Legitimate interest</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Meet tax, accounting, or legal record-keeping requirements (if monetisation begins)</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Legal obligation — Art. 6(1)(c)</td>
+          </tr>
+          <tr>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Defend against or bring legal claims</td>
+            <td class="text-left px-3 py-2.5 border-b border-gray-200 align-top text-gray-700 leading-5">Legitimate interest</td>
+          </tr>
         </tbody>
       </table>
 
-      <h2>5. Where data is stored and who we share it with</h2>
-      <ul>
-        <li><strong>Server hosting:</strong> Amazon Web Services, EU region (Stockholm — <em>eu-north-1</em>). The PostgreSQL database storing driver accounts and the Go application server run there.</li>
-        <li><strong>Email delivery:</strong> Google (Gmail SMTP), used to send the 6-digit sign-in codes to drivers. Google receives the recipient's email address and the message contents.</li>
-        <li><strong>Other users:</strong> when a passenger requests a ride, the passenger's app receives the matched driver's phone number. The driver's app receives no information about the passenger (the passenger then calls the driver from their own phone).</li>
-        <li><strong>Authorities:</strong> we may share data with law enforcement, tax authorities, or courts when legally required.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">5. Where data is stored and who we share it with</h2>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Server hosting:</strong> Amazon Web Services, EU region (Stockholm — <em>eu-north-1</em>). The PostgreSQL database storing driver accounts and the Go application server run there.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Email delivery:</strong> Google (Gmail SMTP), used to send the 6-digit sign-in codes to drivers. Google receives the recipient's email address and the message contents.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Other users:</strong> when a passenger requests a ride, the passenger's app receives the matched driver's phone number. The driver's app receives no information about the passenger (the passenger then calls the driver from their own phone).</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Authorities:</strong> we may share data with law enforcement, tax authorities, or courts when legally required.</li>
       </ul>
-      <p>We <strong>do not sell</strong> personal data. We do not run advertising. There are no analytics or tracking SDKs in the apps.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">We <strong class="font-semibold text-gray-900">do not sell</strong> personal data. We do not run advertising. There are no analytics or tracking SDKs in the apps.</p>
 
-      <h2>6. International transfers</h2>
-      <p>Server infrastructure is in the EU (Stockholm). However, our email provider (Google) and certain Apple/Google push-notification services may transfer data to the United States. These transfers are covered by the <strong>EU–US Data Privacy Framework</strong> and/or <strong>Standard Contractual Clauses</strong> approved by the European Commission.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">6. International transfers</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">Server infrastructure is in the EU (Stockholm). However, our email provider (Google) and certain Apple/Google push-notification services may transfer data to the United States. These transfers are covered by the <strong class="font-semibold text-gray-900">EU–US Data Privacy Framework</strong> and/or <strong class="font-semibold text-gray-900">Standard Contractual Clauses</strong> approved by the European Commission.</p>
 
-      <h2>7. How long we keep data</h2>
-      <ul>
-        <li><strong>Driver account data</strong> — kept for as long as the account is active. After account deletion, kept up to <strong>5 years</strong> if needed to satisfy Greek tax or legal record-keeping obligations, otherwise erased.</li>
-        <li><strong>OTP codes</strong> — deleted immediately after use, or after 3 minutes if unused.</li>
-        <li><strong>JWT tokens</strong> — held only on the driver's device; cleared when the driver logs out or uninstalls the app.</li>
-        <li><strong>Driver live location</strong> — held in server memory only, deleted automatically after some time without an update.</li>
-        <li><strong>Passenger location coordinates sent during a ride request</strong> — used to find the nearest driver and discarded; never written to disk.</li>
-        <li><strong>Driving-licence and ΕΔΧ expiry dates</strong> — kept while the driver account is active, deleted together with the account.</li>
-        <li><strong>Server access logs</strong> — typically rotated within 30 days unless needed for incident investigation.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">7. How long we keep data</h2>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Driver account data</strong> — kept for as long as the account is active. After account deletion, kept up to <strong class="font-semibold text-gray-900">5 years</strong> if needed to satisfy Greek tax or legal record-keeping obligations, otherwise erased.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">OTP codes</strong> — deleted immediately after use, or after 3 minutes if unused.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">JWT tokens</strong> — held only on the driver's device; cleared when the driver logs out or uninstalls the app.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Driver live location</strong> — held in server memory only, deleted automatically after some time without an update.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Passenger location coordinates sent during a ride request</strong> — used to find the nearest driver and discarded; never written to disk.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Driving-licence and ΕΔΧ expiry dates</strong> — kept while the driver account is active, deleted together with the account.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Server access logs</strong> — typically rotated within 30 days unless needed for incident investigation.</li>
       </ul>
 
-      <h2>8. Your rights (GDPR)</h2>
-      <p>You can, at any time:</p>
-      <ul>
-        <li><strong>Access</strong> your personal data (Art. 15)</li>
-        <li><strong>Rectify</strong> inaccurate data (Art. 16)</li>
-        <li><strong>Erase</strong> your data — right to be forgotten (Art. 17)</li>
-        <li><strong>Restrict</strong> processing (Art. 18)</li>
-        <li><strong>Port</strong> your data to another provider (Art. 20)</li>
-        <li><strong>Object</strong> to processing based on legitimate interest (Art. 21)</li>
-        <li><strong>Withdraw consent</strong> at any time, where processing is based on consent</li>
-        <li><strong>Lodge a complaint</strong> with the <strong>Hellenic Data Protection Authority</strong> — <a href="https://www.dpa.gr">www.dpa.gr</a>, Kifissias 1-3, 11523 Athens, +30 210 6475600</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">8. Your rights (GDPR)</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">You can, at any time:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Access</strong> your personal data (Art. 15)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Rectify</strong> inaccurate data (Art. 16)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Erase</strong> your data — right to be forgotten (Art. 17)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Restrict</strong> processing (Art. 18)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Port</strong> your data to another provider (Art. 20)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Object</strong> to processing based on legitimate interest (Art. 21)</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Withdraw consent</strong> at any time, where processing is based on consent</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5"><strong class="font-semibold text-gray-900">Lodge a complaint</strong> with the <strong class="font-semibold text-gray-900">Hellenic Data Protection Authority</strong> — <a href="https://www.dpa.gr" class="text-blue-500 underline">www.dpa.gr</a>, Kifissias 1-3, 11523 Athens, +30 210 6475600</li>
       </ul>
-      <p>To exercise any right, email <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a>. We respond within <strong>30 days</strong> at no cost.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">To exercise any right, email <a href="mailto:georgelorentzos@icloud.com" class="text-blue-500 underline">georgelorentzos@icloud.com</a>. We respond within <strong class="font-semibold text-gray-900">30 days</strong> at no cost.</p>
 
-      <h2>9. Security</h2>
-      <ul>
-        <li>All connections between the apps and the server use HTTPS/TLS.</li>
-        <li>Authentication is by short-lived signed tokens (JWT, HS256).</li>
-        <li>The PostgreSQL database is hosted in a private network, not exposed to the public internet.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">9. Security</h2>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">All connections between the apps and the server use HTTPS/TLS.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Authentication is by short-lived signed tokens (JWT, HS256).</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">The PostgreSQL database is hosted in a private network, not exposed to the public internet.</li>
       </ul>
-      <p>No system is 100% secure. If a personal-data breach occurs, we will notify the Hellenic DPA and affected users within 72 hours, as required by GDPR Art. 33–34.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">No system is 100% secure. If a personal-data breach occurs, we will notify the Hellenic DPA and affected users within 72 hours, as required by GDPR Art. 33–34.</p>
 
-      <h2>10. Children</h2>
-      <p>The Service is not directed at children under 16. We do not knowingly collect data from anyone under 16. If you believe a minor's data has been collected, contact us and we will delete it.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">10. Children</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The Service is not directed at children under 16. We do not knowingly collect data from anyone under 16. If you believe a minor's data has been collected, contact us and we will delete it.</p>
 
-      <h2>11. Changes to this policy</h2>
-      <p>We may update this Privacy Policy as the Service evolves (for example, when payments are added or when the operator forms a legal entity). Material changes will be communicated in-app or by email at least <strong>30 days</strong> in advance.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">11. Changes to this policy</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">We may update this Privacy Policy as the Service evolves (for example, when payments are added or when the operator forms a legal entity). Material changes will be communicated in-app or by email at least <strong class="font-semibold text-gray-900">30 days</strong> in advance.</p>
 
-      <h2>12. Contact</h2>
-      <p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">12. Contact</h2>
+      <p class="text-sm text-gray-700 leading-5.5">
         George Lorentzos · Greece<br />
-        Email: <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a> · Phone: +30 694 599 5603
+        Email: <a href="mailto:georgelorentzos@icloud.com" class="text-blue-500 underline">georgelorentzos@icloud.com</a> · Phone: +30 694 599 5603
       </p>
     </section>
 
-    <div class="footer">
+    <div class="mt-9 pt-5 border-t border-gray-200 w-full text-xs text-gray-500 leading-4.5 text-center">
       © 2026 GoFast. All rights reserved. ·
-      <a href="https://go-fast.app/terms">Terms of Service</a>
+      <a href="https://go-fast.app/terms" class="text-blue-500">Terms of Service</a>
     </div>
   </main>
 </body>
