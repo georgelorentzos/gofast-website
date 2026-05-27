@@ -5,234 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service — GoFast</title>
   <link rel="icon" type="image/png" href="assets/images/mascot.png" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html, body {
-      background-color: #ffffff;
-      color: #111111;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              900: '#111111',
+              700: '#374151',
+              600: '#6b7280',
+              500: '#9ca3af',
+              200: '#e5e7eb',
+              100: '#f3f4f6',
+              50: '#f9fafb',
+            },
+            blue: {
+              500: '#0285FF',
+            }
+          },
+          spacing: {
+            '4.5': '1.125rem',
+          }
+        }
+      }
     }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-    }
-
-    .card {
-      width: 100%;
-      max-width: 720px;
-      padding: 32px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .logo {
-      width: 300px;
-      height: 300px;
-      object-fit: contain;
-      margin-bottom: 20px;
-    }
-
-    .heading-block {
-      width: 100%;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #111111;
-      letter-spacing: -0.4px;
-      margin-bottom: 6px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #6b7280;
-      line-height: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #111111;
-      letter-spacing: -0.3px;
-      margin-top: 32px;
-      margin-bottom: 12px;
-    }
-
-    p, li {
-      font-size: 14px;
-      color: #374151;
-      line-height: 22px;
-      margin-bottom: 10px;
-    }
-
-    ul, ol {
-      padding-left: 22px;
-      margin-bottom: 10px;
-    }
-
-    li { margin-bottom: 6px; }
-
-    a {
-      color: #0285FF;
-      text-decoration: underline;
-    }
-
-    strong { color: #111111; font-weight: 600; }
-
-    .notice {
-      width: 100%;
-      background-color: #f3f4f6;
-      border-left: 3px solid #0285FF;
-      padding: 12px 14px;
-      border-radius: 6px;
-      margin: 12px 0;
-      font-size: 13px;
-      color: #374151;
-      line-height: 20px;
-    }
-
-    .footer {
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid #e5e7eb;
-      width: 100%;
-      font-size: 12px;
-      color: #9ca3af;
-      line-height: 18px;
-      text-align: center;
-    }
-
-    .footer a { color: #0285FF; }
-
-    @media (max-width: 480px) {
-      body { padding: 24px 16px; }
-      h1 { font-size: 22px; }
-      h2 { font-size: 17px; }
-    }
-  </style>
+  </script>
 </head>
-<body>
-  <main class="card">
-    <img class="logo" src="assets/images/logo.png" alt="GoFast" draggable="false" />
+<body class="bg-white text-gray-900 antialiased font-system">
+  <main class="w-full max-w-[720px] px-6 py-20 mx-auto flex flex-col items-center">
+    <img class="w-64 md:w-80 max-w-full h-auto -ml-3 md:-ml-6 mb-20" src="assets/images/logo.png" alt="GoFast" draggable="false" />
 
-    <div class="heading-block">
-      <h1>Terms of Service</h1>
-      <p class="subtitle">Last updated: 4 May 2026</p>
+    <div class="w-full mb-7">
+      <h1 class="text-2xl font-bold text-gray-900 tracking-tight mb-1.5 leading-[1.2]">Terms of Service</h1>
+      <p class="text-sm text-gray-600 leading-5">Last updated: 4 May 2026</p>
     </div>
 
-    <section style="width: 100%;">
-      <h2>1. Agreement</h2>
-      <p>By using the GoFast passenger app, the GoFast Driver app, or the GoFast admin panel (together, the "Service"), you accept these Terms. If you don't accept them, don't use the Service.</p>
-      <p>By agreeing to these Terms of Service, you also agree to our <a href="./privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference and explains how we process personal data.</p>
-      <p>The Service is operated by <strong>George Lorentzos</strong>, Greece (the "Operator", "we", "us"). Contact: <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a>, +30 694 599 5603.</p>
+    <section class="w-full">
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">1. Agreement</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">By using the GoFast passenger app, the GoFast Driver app, or the GoFast admin panel (together, the "Service"), you accept these Terms. If you don't accept them, don't use the Service.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">By agreeing to these Terms of Service, you also agree to our <a href="./privacy.html" class="text-blue-500 underline">Privacy Policy</a>, which is incorporated into these Terms by reference and explains how we process personal data.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The Service is operated by <strong class="font-semibold text-gray-900">George Lorentzos</strong>, Greece (the "Operator", "we", "us"). Contact: <a href="mailto:georgelorentzos@icloud.com" class="text-blue-500 underline">georgelorentzos@icloud.com</a>, +30 694 599 5603.</p>
 
-      <h2>2. About the Service</h2>
-      <div class="notice">
-        GoFast is a <strong>technology platform that connects passengers with independent drivers</strong>. GoFast is <strong>not</strong> a transport carrier and does not provide transport services itself. Drivers are independent professionals operating under their own licences and insurance.
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">2. About the Service</h2>
+      <div class="w-full bg-gray-100 border-l-[3px] border-blue-500 px-3.5 py-3 rounded mb-2.5 text-xs text-gray-700 leading-5">
+        GoFast is a <strong class="font-semibold text-gray-900">technology platform that connects passengers with independent drivers</strong>. GoFast is <strong class="font-semibold text-gray-900">not</strong> a transport carrier and does not provide transport services itself. Drivers are independent professionals operating under their own licences and insurance.
       </div>
-      <p>The Service is currently in <strong>early-stage operation / pilot</strong>. No platform fees are charged to drivers or passengers. Features may change, be added, or be removed without notice during this period.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The Service is currently in <strong class="font-semibold text-gray-900">early-stage operation / pilot</strong>. No platform fees are charged to drivers or passengers. Features may change, be added, or be removed without notice during this period.</p>
 
-      <h2>3. Eligibility</h2>
-      <ul>
-        <li>You must be at least <strong>18 years old</strong> and legally able to enter contracts in your jurisdiction.</li>
-        <li>Drivers must additionally hold all licences, permits, vehicle registration, valid roadworthiness inspection (ΚΤΕΟ), and an insurance policy that explicitly covers <strong>paid passenger transport</strong>, as required by Greek law.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">3. Eligibility</h2>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You must be at least <strong class="font-semibold text-gray-900">18 years old</strong> and legally able to enter contracts in your jurisdiction.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Drivers must additionally hold all licences, permits, vehicle registration, valid roadworthiness inspection (ΚΤΕΟ), and an insurance policy that explicitly covers <strong class="font-semibold text-gray-900">paid passenger transport</strong>, as required by Greek law.</li>
       </ul>
 
-      <h2>4. Passenger use of the Service</h2>
-      <ul>
-        <li>Passengers do <strong>not</strong> create an account. The app is free to install and use.</li>
-        <li>The transport agreement is concluded directly between you and the driver. The fare, route, payment method, and any cancellation are <strong>arranged between you and the driver</strong>, outside the GoFast platform.</li>
-        <li>GoFast does not collect or process any payment between you and the driver.</li>
-        <li>You are responsible for your own safety and conduct during the trip. Treat drivers and their vehicles with respect.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">4. Passenger use of the Service</h2>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Passengers do <strong class="font-semibold text-gray-900">not</strong> create an account. The app is free to install and use.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">The transport agreement is concluded directly between you and the driver. The fare, route, payment method, and any cancellation are <strong class="font-semibold text-gray-900">arranged between you and the driver</strong>, outside the GoFast platform.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">GoFast does not collect or process any payment between you and the driver.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You are responsible for your own safety and conduct during the trip. Treat drivers and their vehicles with respect.</li>
       </ul>
 
-      <h2>5. Driver accounts</h2>
-      <ul>
-        <li>Driver accounts are <strong>created by an administrator</strong>, not by self-registration. To request an account, contact the operator at the email above.</li>
-        <li>Sign-in is by email + 6-digit one-time code (OTP). There is no password.</li>
-        <li>Each driver may have only one account. Account sharing is prohibited.</li>
-        <li>You are responsible for keeping access to your email account secure, since it controls access to your driver account.</li>
-        <li>You must keep your username, email, and phone number accurate and up to date.</li>
-        <li>The operator may suspend or delete a driver account at any time, without notice, for: violation of these Terms, expired or invalid licences/insurance, fraud, safety risk, or any conduct that harms passengers or the platform.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">5. Driver accounts</h2>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Driver accounts are <strong class="font-semibold text-gray-900">created by an administrator</strong>, not by self-registration. To request an account, contact the operator at the email above.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Sign-in is by email + 6-digit one-time code (OTP). There is no password.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Each driver may have only one account. Account sharing is prohibited.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You are responsible for keeping access to your email account secure, since it controls access to your driver account.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You must keep your username, email, and phone number accurate and up to date.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">The operator may suspend or delete a driver account at any time, without notice, for: violation of these Terms, expired or invalid licences/insurance, fraud, safety risk, or any conduct that harms passengers or the platform.</li>
       </ul>
 
-      <h2>6. Driver-specific obligations</h2>
-      <p>If you operate as a driver on the Service, you confirm and agree that:</p>
-      <ul>
-        <li>You hold all professional licences required by Greek law for paid passenger transport.</li>
-        <li>You have a vehicle insurance policy <strong>covering paid passenger transport</strong> (not just private use). You acknowledge that a regular private-use policy is normally <strong>void</strong> during paid passenger trips.</li>
-        <li>Your vehicle has a valid ΚΤΕΟ (roadworthiness inspection).</li>
-        <li>You are an <strong>independent contractor</strong>, not an employee of GoFast or the operator. You are solely responsible for your own income tax, VAT (if applicable), social security (EFKA / e-EFKA), and any other professional obligations.</li>
-        <li>You will follow the Greek Highway Code and all applicable traffic and safety laws.</li>
-        <li>Fares, payment method, and any receipt are agreed directly with the passenger. The operator currently does not collect a service fee. If a service fee is introduced in the future, you will be notified at least 30 days in advance.</li>
-        <li>You consent to your phone number being shown to a passenger who requests the nearest available driver, so the passenger can contact you.</li>
-        <li>You consent to your real-time GPS location being shared while you are online in the Driver app, so passengers can see nearby drivers (see the <a href="https://go-fast.app/privacy">Privacy Policy</a>).</li>
-        <li>At registration, you will provide the operator with the <strong>expiry dates</strong> of your <strong>driving licence (Δίπλωμα οδήγησης)</strong> and your <strong>Special Taxi Driving Permit (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ)</strong>. The operator stores only these two expiry dates — no scans or copies of any document are requested or kept. You confirm that the dates you provide are accurate and that the underlying documents are genuine and current. You must notify the operator if any of these documents is renewed, suspended, or revoked.</li>
-        <li>You remain solely responsible for holding all other documents required by Greek law for paid passenger transport (identity card, vehicle registration, insurance covering paid transport, ΚΤΕΟ, etc.) and for keeping them valid. The operator does not collect or verify copies of these documents.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">6. Driver-specific obligations</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">If you operate as a driver on the Service, you confirm and agree that:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You hold all professional licences required by Greek law for paid passenger transport.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You have a vehicle insurance policy <strong class="font-semibold text-gray-900">covering paid passenger transport</strong> (not just private use). You acknowledge that a regular private-use policy is normally <strong class="font-semibold text-gray-900">void</strong> during paid passenger trips.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Your vehicle has a valid ΚΤΕΟ (roadworthiness inspection).</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You are an <strong class="font-semibold text-gray-900">independent contractor</strong>, not an employee of GoFast or the operator. You are solely responsible for your own income tax, VAT (if applicable), social security (EFKA / e-EFKA), and any other professional obligations.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You will follow the Greek Highway Code and all applicable traffic and safety laws.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Fares, payment method, and any receipt are agreed directly with the passenger. The operator currently does not collect a service fee. If a service fee is introduced in the future, you will be notified at least 30 days in advance.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You consent to your phone number being shown to a passenger who requests the nearest available driver, so the passenger can contact you.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You consent to your real-time GPS location being shared while you are online in the Driver app, so passengers can see nearby drivers (see the <a href="https://go-fast.app/privacy" class="text-blue-500 underline">Privacy Policy</a>).</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">At registration, you will provide the operator with the <strong class="font-semibold text-gray-900">expiry dates</strong> of your <strong class="font-semibold text-gray-900">driving licence (Δίπλωμα οδήγησης)</strong> and your <strong class="font-semibold text-gray-900">Special Taxi Driving Permit (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ)</strong>. The operator stores only these two expiry dates — no scans or copies of any document are requested or kept. You confirm that the dates you provide are accurate and that the underlying documents are genuine and current. You must notify the operator if any of these documents is renewed, suspended, or revoked.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">You remain solely responsible for holding all other documents required by Greek law for paid passenger transport (identity card, vehicle registration, insurance covering paid transport, ΚΤΕΟ, etc.) and for keeping them valid. The operator does not collect or verify copies of these documents.</li>
       </ul>
 
-      <h2>7. User conduct</h2>
-      <p>Whether you use the Service as a passenger or driver, you must not:</p>
-      <ul>
-        <li>Use the Service for anything illegal, including discrimination based on protected characteristics.</li>
-        <li>Harass, threaten, defraud, or harm other users.</li>
-        <li>Damage vehicles or property; you are liable for damage you cause.</li>
-        <li>Bring or transport prohibited or hazardous items (weapons, explosives, illegal substances).</li>
-        <li>Reverse-engineer, scrape, decompile, or interfere with the Service or its servers.</li>
-        <li>Submit false information, create fake accounts, or impersonate someone else.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">7. User conduct</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">Whether you use the Service as a passenger or driver, you must not:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Use the Service for anything illegal, including discrimination based on protected characteristics.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Harass, threaten, defraud, or harm other users.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Damage vehicles or property; you are liable for damage you cause.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Bring or transport prohibited or hazardous items (weapons, explosives, illegal substances).</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Reverse-engineer, scrape, decompile, or interfere with the Service or its servers.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">Submit false information, create fake accounts, or impersonate someone else.</li>
       </ul>
 
-      <h2>8. No fees during the pilot phase</h2>
-      <p>During the current pilot phase the operator does <strong>not</strong> charge any fee to drivers or passengers for use of the Service. If this changes, drivers will be notified at least 30 days in advance and may stop using the Service if they do not accept the new fee structure.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">8. No fees during the pilot phase</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">During the current pilot phase the operator does <strong class="font-semibold text-gray-900">not</strong> charge any fee to drivers or passengers for use of the Service. If this changes, drivers will be notified at least 30 days in advance and may stop using the Service if they do not accept the new fee structure.</p>
 
-      <h2>9. Disclaimers</h2>
-      <p>THE SERVICE IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong>. To the maximum extent permitted by law:</p>
-      <ul>
-        <li>We do not guarantee that the Service will be uninterrupted, error-free, accurate, or secure.</li>
-        <li>We do not guarantee that a driver will be available at any particular time or location.</li>
-        <li>We are not responsible for the conduct of drivers or passengers, the condition or roadworthiness of any vehicle, traffic or weather conditions, or any incident occurring before, during, or after a trip.</li>
-        <li>We are not a party to the transport contract concluded between a passenger and a driver.</li>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">9. Disclaimers</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">THE SERVICE IS PROVIDED <strong class="font-semibold text-gray-900">"AS IS"</strong> AND <strong class="font-semibold text-gray-900">"AS AVAILABLE"</strong>. To the maximum extent permitted by law:</p>
+      <ul class="list-disc pl-5.5 mb-2.5">
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">We do not guarantee that the Service will be uninterrupted, error-free, accurate, or secure.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">We do not guarantee that a driver will be available at any particular time or location.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">We are not responsible for the conduct of drivers or passengers, the condition or roadworthiness of any vehicle, traffic or weather conditions, or any incident occurring before, during, or after a trip.</li>
+        <li class="text-sm text-gray-700 leading-5.5 mb-1.5">We are not a party to the transport contract concluded between a passenger and a driver.</li>
       </ul>
-      <p>This clause does <strong>not</strong> limit your statutory consumer rights under Greek and EU law.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">This clause does <strong class="font-semibold text-gray-900">not</strong> limit your statutory consumer rights under Greek and EU law.</p>
 
-      <h2>10. Limitation of liability</h2>
-      <p>To the maximum extent permitted by law, the operator's total liability for any claim arising from the Service is limited to <strong>€100</strong>. We are not liable for indirect, incidental, special, or consequential damages, loss of profits, loss of data, or loss of opportunity.</p>
-      <p>Nothing in these Terms limits liability for: (i) death or personal injury caused by our negligence; (ii) fraud; or (iii) any liability that cannot be limited or excluded under Greek law.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">10. Limitation of liability</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">To the maximum extent permitted by law, the operator's total liability for any claim arising from the Service is limited to <strong class="font-semibold text-gray-900">€100</strong>. We are not liable for indirect, incidental, special, or consequential damages, loss of profits, loss of data, or loss of opportunity.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">Nothing in these Terms limits liability for: (i) death or personal injury caused by our negligence; (ii) fraud; or (iii) any liability that cannot be limited or excluded under Greek law.</p>
 
-      <h2>11. Indemnification</h2>
-      <p>You agree to indemnify and hold harmless the operator from any claim, loss, damage, or expense (including reasonable legal fees) arising from your breach of these Terms, your conduct during a trip, your violation of any law, or your violation of the rights of a third party.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">11. Indemnification</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">You agree to indemnify and hold harmless the operator from any claim, loss, damage, or expense (including reasonable legal fees) arising from your breach of these Terms, your conduct during a trip, your violation of any law, or your violation of the rights of a third party.</p>
 
-      <h2>12. Intellectual property</h2>
-      <p>The "GoFast" name, the logo, the apps, and all server-side software are owned by George Lorentzos. You receive a limited, revocable, non-exclusive, non-transferable licence to install and use the apps for their intended purpose. No other rights are granted. You may not copy, modify, distribute, sell, or rent any part of the Service.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">12. Intellectual property</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">The "GoFast" name, the logo, the apps, and all server-side software are owned by George Lorentzos. You receive a limited, revocable, non-exclusive, non-transferable licence to install and use the apps for their intended purpose. No other rights are granted. You may not copy, modify, distribute, sell, or rent any part of the Service.</p>
 
-      <h2>13. Termination</h2>
-      <p>You may stop using the Service at any time. Drivers may request account deletion by emailing <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a>. We may suspend or terminate your access immediately for breach of these Terms, fraud, or any safety risk. Sections 9, 10, 11, 12 and 14 survive termination.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">13. Termination</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">You may stop using the Service at any time. Drivers may request account deletion by emailing <a href="mailto:georgelorentzos@icloud.com" class="text-blue-500 underline">georgelorentzos@icloud.com</a>. We may suspend or terminate your access immediately for breach of these Terms, fraud, or any safety risk. Sections 9, 10, 11, 12 and 14 survive termination.</p>
 
-      <h2>14. Governing law &amp; jurisdiction</h2>
-      <p>These Terms are governed by <strong>Greek law</strong>. Disputes are subject to the <strong>jurisdiction of the courts of Athens, Greece</strong>, except that consumers retain any mandatory rights to bring a claim in their country of residence under EU consumer law.</p>
-      <p>EU online dispute resolution platform: <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a></p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">14. Governing law &amp; jurisdiction</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">These Terms are governed by <strong class="font-semibold text-gray-900">Greek law</strong>. Disputes are subject to the <strong class="font-semibold text-gray-900">jurisdiction of the courts of Athens, Greece</strong>, except that consumers retain any mandatory rights to bring a claim in their country of residence under EU consumer law.</p>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">EU online dispute resolution platform: <a href="https://ec.europa.eu/consumers/odr" class="text-blue-500 underline">https://ec.europa.eu/consumers/odr</a></p>
 
-      <h2>15. Changes</h2>
-      <p>We may update these Terms as the Service evolves. Material changes will be communicated in-app or by email at least <strong>30 days</strong> before they take effect. Continued use of the Service after the effective date means you accept the updated Terms.</p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">15. Changes</h2>
+      <p class="text-sm text-gray-700 leading-5.5 mb-2.5">We may update these Terms as the Service evolves. Material changes will be communicated in-app or by email at least <strong class="font-semibold text-gray-900">30 days</strong> before they take effect. Continued use of the Service after the effective date means you accept the updated Terms.</p>
 
-      <h2>16. Contact</h2>
-      <p>
+      <h2 class="text-lg font-bold text-gray-900 tracking-tight mt-8 mb-3 leading-[1.2]">16. Contact</h2>
+      <p class="text-sm text-gray-700 leading-5.5">
         George Lorentzos · Greece<br />
-        Email: <a href="mailto:georgelorentzos@icloud.com">georgelorentzos@icloud.com</a> · Phone: +30 694 599 5603
+        Email: <a href="mailto:georgelorentzos@icloud.com" class="text-blue-500 underline">georgelorentzos@icloud.com</a> · Phone: +30 694 599 5603
       </p>
     </section>
 
-    <div class="footer">
+    <div class="mt-9 pt-5 border-t border-gray-200 w-full text-xs text-gray-500 leading-4.5 text-center">
       © 2026 GoFast. All rights reserved. ·
-      <a href="https://go-fast.app/privacy">Privacy Policy</a>
+      <a href="https://go-fast.app/privacy" class="text-blue-500">Privacy Policy</a>
     </div>
   </main>
 </body>
