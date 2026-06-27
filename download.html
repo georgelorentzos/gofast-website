@@ -57,21 +57,16 @@
         .opacity-0-init { opacity: 0; }
 
         .store-btn {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, opacity 0.2s ease;
         }
         .store-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 16px 32px -12px rgba(0, 153, 255, 0.5);
+            opacity: 0.92;
         }
         .store-btn:active { transform: translateY(0); }
     </style>
 </head>
 <body class="min-h-screen bg-white text-brand-navy antialiased relative overflow-hidden">
-
-    <!-- Soft brand gradient accents -->
-    <div class="pointer-events-none absolute -top-40 -left-40 w-[30rem] h-[30rem] rounded-full bg-brand-blue/20 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-44 -right-44 w-[32rem] h-[32rem] rounded-full bg-brand-sky/20 blur-3xl"></div>
-    <div class="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[24rem] h-[24rem] rounded-full bg-brand-blue/10 blur-3xl"></div>
 
     <main class="relative min-h-screen flex items-center justify-center px-5 py-16">
         <div class="max-w-xl w-full flex flex-col items-center text-center">
@@ -90,14 +85,14 @@
 
                 <!-- Android -->
                 <a href="https://android.go-fast.app/"
-                   class="store-btn flex items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky px-6 py-3.5 shadow-md shadow-brand-blue/25">
+                   class="store-btn flex items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky px-6 py-3.5">
                     <i class="fab fa-google-play text-2xl text-white"></i>
                     <span class="font-display text-base font-semibold text-white">Download for Android</span>
                 </a>
 
                 <!-- iOS -->
                 <a href="https://ios.go-fast.app/"
-                   class="store-btn flex items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky px-6 py-3.5 shadow-md shadow-brand-blue/25">
+                   class="store-btn flex items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky px-6 py-3.5">
                     <i class="fab fa-apple text-2xl text-white"></i>
                     <span class="font-display text-base font-semibold text-white">Download for iOS</span>
                 </a>
