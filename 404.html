@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 — Page Not Found | GoFast</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="assets/fonts/abc-solar-display-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/tt-norms-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" type="image/png" href="assets/images/mascot.png">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        display: ['Sora', 'sans-serif'],
-                        body: ['DM Sans', 'sans-serif'],
-                        brand: ['Roboto', 'sans-serif'],
+                        display: ['ABC Solar Display', 'sans-serif'],
+                        body: ['TT Norms Pro', 'sans-serif'],
+                        brand: ['ABC Solar Display', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -48,11 +46,25 @@
         }
     </script>
     <style>
+        @font-face {
+            font-family: "ABC Solar Display";
+            src: url("assets/fonts/abc-solar-display-bold.woff2") format("woff2");
+            font-weight: 700; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: "TT Norms Pro";
+            src: url("assets/fonts/tt-norms-pro-regular.woff2") format("woff2");
+            font-weight: 400; font-style: normal; font-display: swap;
+        }
+        :root {
+            --font-sans: "TT Norms Pro", Arial, Helvetica, sans-serif;
+            --font-abc-solar-display: "ABC Solar Display", var(--font-sans);
+        }
         html { scrollbar-width: none; }
         html::-webkit-scrollbar { display: none; }
-        body { font-family: 'DM Sans', sans-serif; }
-        .font-display { font-family: 'Sora', sans-serif; }
-        .font-brand { font-family: 'Roboto', sans-serif; }
+        body { font-family: var(--font-sans); }
+        .font-display { font-family: var(--font-abc-solar-display); letter-spacing: -0.01em; }
+        .font-brand { font-family: inherit; }
 
         .mascot-float {
             width: 220px;
@@ -92,8 +104,8 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                        <a href="https://go-fast.app/" class="inline-flex items-center justify-center gap-2 bg-[#01A9D5] text-white font-display font-semibold text-base rounded-2xl px-7 py-3.5 shadow-sm shadow-[#01A9D5]/30 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
-                            <i class="fa-solid fa-house text-sm"></i>
+                        <a href="https://go-fast.app/" class="inline-flex items-center justify-center gap-2 bg-[#01A9D5] text-white font-display font-semibold text-base rounded-2xl px-7 py-3.5 transition-transform duration-200 hover:-translate-y-0.5" style="-webkit-box-shadow: 0 10px 24px -10px rgba(1,169,213,.6); box-shadow: 0 10px 24px -10px rgba(1,169,213,.6);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
                             Back to Home
                         </a>
                     </div>
