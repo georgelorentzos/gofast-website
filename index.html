@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoFast - Find Nearby Taxis Instantly</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="assets/fonts/abc-solar-display-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/tt-norms-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" type="image/png" href="assets/images/mascot.png">
     <meta name="apple-itunes-app" content="app-id=6767772428">
     <meta name="title" content="GoFast - Find Nearby Taxis Instantly">
@@ -28,9 +26,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        display: ['Sora', 'sans-serif'],
-                        body: ['DM Sans', 'sans-serif'],
-                        brand: ['Roboto', 'sans-serif'],
+                        display: ['ABC Solar Display', 'sans-serif'],
+                        body: ['TT Norms Pro', 'sans-serif'],
+                        brand: ['ABC Solar Display', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -61,16 +59,66 @@
         }
     </script>
     <style>
+        @font-face {
+            font-family: "ABC Solar Display";
+            src: url("assets/fonts/abc-solar-display-bold.woff2") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "TT Norms Pro";
+            src: url("assets/fonts/tt-norms-pro-regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        :root {
+            --font-sans: "TT Norms Pro", Arial, Helvetica, sans-serif;
+            --font-abc-solar-display: "ABC Solar Display", var(--font-sans);
+        }
         html { scrollbar-width: none; }
         html::-webkit-scrollbar { display: none; }
-        body { font-family: 'DM Sans', sans-serif; }
-        .font-display { font-family: 'Sora', sans-serif; }
-        .font-brand { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: var(--font-sans);
+            background:
+                radial-gradient(ellipse 70% 45% at 85% 8%, rgba(1,169,213,.10), transparent 60%),
+                radial-gradient(ellipse 60% 40% at 10% 55%, rgba(1,169,213,.07), transparent 60%),
+                linear-gradient(180deg, #ffffff 0%, #f3fafd 40%, #ffffff 72%, #edf8fc 100%);
+        }
+        .font-display { font-family: var(--font-abc-solar-display); letter-spacing: -0.01em; }
+        .font-brand { font-family: inherit; }
 
-        .phone-mockup {
-            width: 300px;
-            height: auto;
-            animation: float 6s ease-in-out infinite;
+        @keyframes phoneFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 45%, rgba(1,169,213,.22) 0%, rgba(1,169,213,.10) 38%, rgba(1,169,213,0) 68%);
+        }
+
+        .app-shot {
+            display: block;
+            border-radius: 1.9rem;
+            border: 4px solid #0d1a24;
+            background: #0d1a24;
+            -webkit-box-shadow: 0 30px 55px -22px rgba(0, 17, 34, .38);
+            box-shadow: 0 30px 55px -22px rgba(0, 17, 34, .38);
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .float-a { animation: phoneFloat 6s ease-in-out infinite; }
+        .float-b { animation: phoneFloat 7s ease-in-out .8s infinite; }
+        .float-c { animation: phoneFloat 6.5s ease-in-out 1.6s infinite; }
+
+        .faq-item {
+            -webkit-box-shadow: 0 8px 20px -10px rgba(1, 169, 213, .55);
+            box-shadow: 0 8px 20px -10px rgba(1, 169, 213, .55);
+            transition: box-shadow .2s ease, transform .2s ease;
+        }
+        .faq-item:hover {
+            -webkit-box-shadow: 0 12px 26px -10px rgba(1, 169, 213, .6);
+            box-shadow: 0 12px 26px -10px rgba(1, 169, 213, .6);
         }
 
         .faq-content {
@@ -80,7 +128,7 @@
         }
 
         .faq-item.active .faq-content {
-            max-height: 200px;
+            max-height: 320px;
         }
 
         .faq-item.active .toggle-icon {
@@ -95,7 +143,7 @@
         .opacity-0-init { opacity: 0; }
     </style>
 </head>
-<body class="bg-white text-gray-500 antialiased">
+<body class="text-gray-500 antialiased overflow-x-hidden">
 
     <section class="min-h-[85vh] flex items-center pt-20 pb-16 px-5">
         <div class="max-w-6xl mx-auto w-full">
@@ -103,21 +151,39 @@
 
                 <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-md opacity-0-init animate-fadeUp">
 
-                    <img src="assets/images/logo.png" alt="GoFast Logo" draggable="false" class="w-64 md:w-80 max-w-full h-auto -ml-3 md:-ml-6" />
-                    <p class="text-lg md:text-xl text-gray-500 leading-relaxed mb-10 max-w-xs mt-1">
+                    <img src="assets/images/logo.png" alt="GoFast Logo" draggable="false" class="w-56 md:w-72 max-w-full h-auto -ml-3 md:-ml-6" />
+                    <h1 class="font-display font-bold text-4xl md:text-[2.9rem] text-[#001122] leading-[1.15] mt-5 mb-4">
+                        The nearest taxi,<br>
+                        <span class="text-[#01A9D5]">one call away.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-500 leading-relaxed mb-10 max-w-xs">
                         No booking needed — just open the app and make the call
                     </p>
                     <div class="flex gap-4">
                         <a href="https://android.go-fast.app/" class="block transition-transform duration-200 hover:-translate-y-0.5">
-                            <img src="assets/images/googleplay.webp" alt="Play Store" class="h-11">
+                            <img src="assets/images/google-play.webp" alt="Play Store" class="h-11">
                         </a>
                         <a href="https://ios.go-fast.app/" class="block transition-transform duration-200 hover:-translate-y-0.5">
-                            <img src="assets/images/applestore.webp" alt="App Store" class="h-11">
+                            <img src="assets/images/app-store.webp" alt="App Store" class="h-11">
                         </a>
                     </div>
                 </div>
 
-                <img src="assets/images/phone.png" alt="Phone" draggable="false" class="phone-mockup opacity-0-init animate-fadeUp flex-shrink-0" />
+                <div class="relative flex items-center justify-center flex-shrink-0 py-10 md:py-14 opacity-0-init animate-fadeUp-d1">
+                    <div class="hero-glow absolute inset-0 -z-10" aria-hidden="true"></div>
+
+                    <div class="-rotate-6 translate-y-8 md:translate-y-12 -mr-9 md:-mr-12 z-0">
+                        <img src="assets/images/app/driver.png" alt="GoFast app showing the route and distance to the nearest driver" draggable="false" class="app-shot float-b w-32 md:w-44 h-auto" />
+                    </div>
+
+                    <div class="relative z-10">
+                        <img src="assets/images/app/home.png" alt="GoFast app showing live taxis on the map with a Call Now button" draggable="false" class="app-shot float-a w-44 md:w-60 h-auto" />
+                    </div>
+
+                    <div class="rotate-6 -translate-y-8 md:-translate-y-12 -ml-9 md:-ml-12 z-0">
+                        <img src="assets/images/app/route.png" alt="GoFast app showing driver details with distance and call button" draggable="false" class="app-shot float-c w-32 md:w-44 h-auto" />
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -137,7 +203,7 @@
 
                 <div class="flex flex-col gap-3">
 
-                    <div class="faq-item bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-6 py-5 cursor-pointer transition-shadow duration-200 hover:shadow-md" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-[#01A9D5] rounded-2xl px-6 py-5 cursor-pointer" onclick="toggleFaq(this)">
                         <div class="faq-header flex justify-between items-center">
                             <h3 class="font-display font-semibold text-white text-base">Zero Tech For Driver</h3>
                             <span class="toggle-icon text-white text-2xl font-light leading-none">+</span>
@@ -147,7 +213,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-6 py-5 cursor-pointer transition-shadow duration-200 hover:shadow-md" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-[#01A9D5] rounded-2xl px-6 py-5 cursor-pointer" onclick="toggleFaq(this)">
                         <div class="faq-header flex justify-between items-center">
                             <h3 class="font-display font-semibold text-white text-base">Open Access</h3>
                             <span class="toggle-icon text-white text-2xl font-light leading-none">+</span>
@@ -157,7 +223,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-6 py-5 cursor-pointer transition-shadow duration-200 hover:shadow-md" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-[#01A9D5] rounded-2xl px-6 py-5 cursor-pointer" onclick="toggleFaq(this)">
                         <div class="faq-header flex justify-between items-center">
                             <h3 class="font-display font-semibold text-white text-base">No Fees, No Commissions</h3>
                             <span class="toggle-icon text-white text-2xl font-light leading-none">+</span>
@@ -167,7 +233,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-[#01A9D5] rounded-2xl shadow-sm shadow-[#01A9D5]/20 px-6 py-5 cursor-pointer transition-shadow duration-200 hover:shadow-md" onclick="toggleFaq(this)">
+                    <div class="faq-item bg-[#01A9D5] rounded-2xl px-6 py-5 cursor-pointer" onclick="toggleFaq(this)">
                         <div class="faq-header flex justify-between items-center">
                             <h3 class="font-display font-semibold text-white text-base">Quality</h3>
                             <span class="toggle-icon text-white text-2xl font-light leading-none">+</span>
@@ -206,19 +272,18 @@
         </div>
     </section>
 
-    <footer class="bg-white border-t border-gray-100 pt-14 pb-6 px-5 mt-10">
+    <footer class="border-t border-gray-100 pt-14 pb-6 px-5 mt-10">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between gap-10 pb-10">
 
                 <div class="flex flex-col items-center md:items-start gap-4">
                      <img src="assets/images/logo.png" alt="GoFast Logo" draggable="false" class="w-64 md:w-80 max-w-full h-auto -ml-3 md:-ml-6" />
-                    <p class="text-gray-500 text-sm">Find The Nearest Taxi With Ease</p>
                     <div class="flex gap-3">
                         <a href="https://android.go-fast.app/" class="block transition-transform duration-200 hover:-translate-y-0.5">
-                            <img src="assets/images/googleplay.webp" alt="Play Store" class="h-10">
+                            <img src="assets/images/google-play.webp" alt="Play Store" class="h-10">
                         </a>
                         <a href="https://ios.go-fast.app/" class="block transition-transform duration-200 hover:-translate-y-0.5">
-                            <img src="assets/images/applestore.webp" alt="App Store" class="h-10">
+                            <img src="assets/images/app-store.webp" alt="App Store" class="h-10">
                         </a>
                     </div>
                 </div>
