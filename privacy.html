@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Privacy Policy — GoFast</title>
+<link rel="icon" type="image/png" href="assets/images/brand/mascot.png">
+<meta name="description" content="Privacy Policy for the GoFast taxi app.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+html { scroll-behavior: smooth; scrollbar-width: none; background: #04A8D4; }
+html::-webkit-scrollbar { display: none; }
+img { -webkit-user-drag: none; user-select: none; }
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+/* ---------- nav ---------- */
+nav { position: sticky; top: 0; z-index: 110; background: #04A8D4; color: #fff; padding-top: env(safe-area-inset-top); }
+.nav-in {
+    display: flex; align-items: center;
+    height: 64px; gap: 36px;
+}
+.brand img { height: 30px; width: auto; }
+.nav-links { display: flex; gap: 28px; font-size: 14.5px; flex: 1; }
+.nav-links a { color: #ffffff; }
+.nav-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.nav-get {
+    background: #fff; color: #04A8D4;
+    font-size: 14.5px; font-weight: 500;
+    padding: 9px 18px; border-radius: 99px;
+}
+.nav-get:hover { background: #e8f7fc; }
+.nav-burger {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    padding: 8px; margin-left: auto;
+}
+.nav-burger span {
+    display: block; width: 22px; height: 2px; background: #fff;
+    margin: 5px 0; border-radius: 2px; transition: transform .25s, opacity .25s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+    position: fixed;
+    top: calc(64px + env(safe-area-inset-top));
+    left: 0; right: 0; bottom: 0;
+    z-index: 90;
+    background: #04A8D4;
+    touch-action: none;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+}
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .25s ease;
+}
+.mobile-menu a {
+    display: block; color: #fff; font-size: 20px; font-weight: 500;
+    padding: 14px 0;
+}
+.mobile-menu .mm-get {
+    margin-top: 20px;
+    background: #fff; color: #04A8D4;
+    text-align: center; font-weight: 700; font-size: 16px;
+    padding: 13px 36px; border-radius: 99px;
+}
+@media (max-width: 760px) {
+    .nav-links { display: none; }
+    .nav-get { display: none; }
+    .nav-burger { display: block; }
+}
+
+/* ---------- legal document ---------- */
+main { flex: 1; background: #ffffff; }
+.legal { width: 100%; max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+.legal h1 { font-size: clamp(30px, 4.4vw, 42px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; margin-bottom: 8px; }
+.legal .updated { font-size: 14px; color: #757575; margin-bottom: 40px; }
+.legal h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.01em; margin: 40px 0 12px; }
+.legal h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; }
+.legal p { font-size: 15.5px; color: #4b4b4b; margin-bottom: 12px; }
+.legal strong { color: #000; font-weight: 700; }
+.legal ul { padding-left: 22px; margin-bottom: 14px; }
+.legal li { font-size: 15.5px; color: #4b4b4b; margin-bottom: 8px; }
+.legal a { color: #04A8D4; text-decoration: underline; text-underline-offset: 3px; }
+.legal a:hover { color: #0284a6; }
+.legal .callout {
+    background: #f6f6f6;
+    border-left: 3px solid #04A8D4;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14.5px; color: #4b4b4b;
+    margin-bottom: 14px;
+}
+.legal table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+.legal th, .legal td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e5e5; vertical-align: top; color: #4b4b4b; }
+.legal th { background: #f6f6f6; color: #000; font-weight: 700; }
+
+/* ---------- footer ---------- */
+footer { background: #04A8D4; color: #fff; padding: 56px 0 calc(32px + env(safe-area-inset-bottom)); }
+.foot-top { display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap; padding-bottom: 40px; }
+.foot-brand img { height: 34px; width: auto; }
+.foot-cols { display: flex; gap: 80px; flex-wrap: wrap; }
+.foot-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+.foot-col ul { list-style: none; }
+.foot-col li { margin-bottom: 12px; }
+.foot-col a { color: rgba(255,255,255,.85); font-size: 14px; }
+.foot-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom {
+    border-top: 1px solid rgba(255,255,255,.28);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    font-size: 13px; color: rgba(255,255,255,.85);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="wrap nav-in">
+        <a class="brand" href="https://go-fast.app/"><img decoding="async" draggable="false" src="assets/images/brand/logo-white.png" alt="GoFast"></a>
+        <div class="nav-links">
+            <a href="https://go-fast.app/#drivers">Drivers</a>
+            <a href="https://go-fast.app/#how">How it works</a>
+            <a href="https://go-fast.app/app/download.html">Download</a>
+            <a href="https://go-fast.app/#contact">Contact</a>
+        </div>
+        <a class="nav-get" href="https://go-fast.app/app/download.html">Get the app</a>
+        <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <aside class="mobile-menu" id="mobileMenu" aria-label="Menu">
+        <a href="https://go-fast.app/#drivers">Drivers</a>
+        <a href="https://go-fast.app/#how">How it works</a>
+        <a href="https://go-fast.app/app/download.html">Download</a>
+        <a href="https://go-fast.app/#contact">Contact</a>
+        <a class="mm-get" href="https://go-fast.app/app/download.html">Get the app</a>
+    </aside>
+</nav>
+
+
+<main><div class="legal">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 4 May 2026 · Effective: 4 May 2026</p>
+
+      <h2>1. Who we are</h2>
+      <p>This Privacy Policy describes how <strong>George Lorentzos</strong> ("GoFast", "we", "us", "our") processes personal data in connection with the GoFast app, the GoFast Driver app, and the GoFast admin web panel (together, the "Service").</p>
+      <p>
+        <strong>Operator:</strong> George Lorentzos (natural person, sole operator)<br />
+        <strong>Country:</strong> Greece<br />
+        <strong>Contact:</strong> <a href="https://go-fast.app/#contact">contact form on our website</a><br />
+      </p>
+      <p>We comply with <strong>Regulation (EU) 2016/679 (GDPR)</strong> and Greek Law 4624/2019. For the purposes of GDPR, the data controller is George Lorentzos.</p>
+
+      <h2>2. About the Service</h2>
+      <div>
+        GoFast is a <strong>technology platform that connects passengers with independent drivers</strong>. We are <strong>not</strong> a transport carrier and do not provide transport services ourselves. Drivers are independent and operate under their own licences and insurance.
+      </div>
+      <p>The Service has two distinct user groups, treated very differently:</p>
+      <ul>
+        <li><strong>Passengers</strong> — use the GoFast passenger app <strong>without registering or creating an account</strong>. The app simply shows nearby drivers and lets the passenger contact a driver directly by phone.</li>
+        <li><strong>Drivers</strong> — have accounts created and managed by an administrator. They sign in with their email and a 6-digit one-time code, then go online to share their location with nearby passengers.</li>
+      </ul>
+
+      <h2>3. What data we collect</h2>
+
+      <h3>a) Passengers (no account)</h3>
+      <p>The passenger app does not require registration. We do not collect, store, or persist any personal data about passengers on our servers. Specifically:</p>
+      <ul>
+        <li>No name, email, phone number or account is collected from passengers.</li>
+        <li>Your GPS coordinates (latitude/longitude) <strong>never leave your device</strong>. The matching of the nearest driver happens entirely on your phone — we do not receive, process, or store your location at any time.</li>
+        <li>Our server only provides the app with the list of currently online drivers and their published locations, first names, and phone numbers. Your device then selects the nearest driver locally so you can call them directly.</li>
+        <li>Standard server logs (IP address, request path, timestamp, user-agent) are kept temporarily for security and abuse prevention, and rotated regularly.</li>
+      </ul>
+
+      <h3>b) Drivers</h3>
+      <p>For each driver account we store the following in our database:</p>
+      <ul>
+        <li><strong>Username</strong> (used to recognize drivers)</li>
+        <li><strong>Email address</strong> (used to send the 6-digit sign-in code)</li>
+        <li><strong>Phone number</strong> (shown to a passenger after a ride request, so they can call you)</li>
+        <li><strong>Account flags</strong>: paid status, admin status, account creation date, account expiry date</li>
+        <li><strong>Driving licence expiry date</strong> (Δίπλωμα οδήγησης — expiry date only; we do <strong>not</strong> store the licence number, a scan, or any other detail)</li>
+        <li><strong>Special Taxi Driving Permit expiry date</strong> (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ — expiry date only; we do <strong>not</strong> store the permit number, a scan, or any other detail)</li>
+        <li><strong>One-time passcodes (OTPs)</strong> — temporarily stored, expire after 3 minutes, deleted immediately after use</li>
+        <li><strong>Authentication tokens (JWTs)</strong> — issued on successful sign-in, stored locally on the driver's device (in secure on-device storage), not stored on our servers</li>
+      </ul>
+      <p>While a driver is <strong>online</strong> in the Driver app, the device transmits GPS data (latitude, longitude, speed, heading) to our server every few seconds, including in the background while driving. This is necessary so passengers can see nearby drivers in real time. This location data is held <strong>only in volatile server memory</strong> with a 20-second time-to-live and is <strong>never written to a database, file, or log</strong>. When the driver goes offline, swipes the app away, or stops sending updates, the location is removed automatically.</p>
+
+      <h3>c) Admin web panel</h3>
+      <p>The admin panel is used by authorised administrators (currently only the operator) to create and manage driver accounts. Admins see the same driver fields listed above. There is no separate data collected for admin users — they are also drivers with the <em>admin</em> flag.</p>
+
+      <h3>d) Driver document expiry tracking</h3>
+      <p>When a driver is registered, the operator records only the <strong>expiry dates</strong> of the driver's <strong>driving licence (Δίπλωμα οδήγησης)</strong> and <strong>Special Taxi Driving Permit (Ειδική Άδεια Οδήγησης Ταξί / ΕΔΧ)</strong>. These two expiry dates are used to know when a driver's documents are about to lapse so the account can be deactivated in time. We do <strong>not</strong> request, upload, scan, photograph, or otherwise store copies of the licence, the ΕΔΧ, the identity card, the vehicle registration, the insurance certificate, or the ΚΤΕΟ. Drivers remain personally responsible for holding all such valid documents under Greek law (see the Terms of Service).</p>
+
+      <h2>4. Why we process this data (legal bases under GDPR Art. 6)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Legal basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Create and operate driver accounts</td>
+            <td>Contract — Art. 6(1)(b)</td>
+          </tr>
+          <tr>
+            <td>Send sign-in codes by email</td>
+            <td>Contract</td>
+          </tr>
+          <tr>
+            <td>Match a passenger with the nearest online driver</td>
+            <td>Legitimate interest — Art. 6(1)(f) — operating the Service</td>
+          </tr>
+          <tr>
+            <td>Show driver name and phone to a passenger requesting a ride</td>
+            <td>Legitimate interest — enabling contact between users</td>
+          </tr>
+          <tr>
+            <td>Track driving-licence and ΕΔΧ expiry dates so accounts can be deactivated when documents lapse</td>
+            <td>Legitimate interest + legal obligation</td>
+          </tr>
+          <tr>
+            <td>Prevent fraud, abuse, or technical attacks</td>
+            <td>Legitimate interest</td>
+          </tr>
+          <tr>
+            <td>Meet tax, accounting, or legal record-keeping requirements (if monetisation begins)</td>
+            <td>Legal obligation — Art. 6(1)(c)</td>
+          </tr>
+          <tr>
+            <td>Defend against or bring legal claims</td>
+            <td>Legitimate interest</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>5. Where data is stored and who we share it with</h2>
+      <ul>
+        <li><strong>Server hosting:</strong> Amazon Web Services, EU region (Stockholm — <em>eu-north-1</em>). The PostgreSQL database storing driver accounts and the Go application server run there.</li>
+        <li><strong>Email delivery:</strong> Google (Gmail SMTP), used to send the 6-digit sign-in codes to drivers. Google receives the recipient's email address and the message contents.</li>
+        <li><strong>Other users:</strong> when a passenger requests a ride, the passenger's app receives the matched driver's phone number. The driver's app receives no information about the passenger (the passenger then calls the driver from their own phone).</li>
+        <li><strong>Authorities:</strong> we may share data with law enforcement, tax authorities, or courts when legally required.</li>
+      </ul>
+      <p>We <strong>do not sell</strong> personal data. We do not run advertising. There are no analytics or tracking SDKs in the apps.</p>
+
+      <h2>6. International transfers</h2>
+      <p>Server infrastructure is in the EU (Stockholm). However, our email provider (Google) and certain Apple/Google push-notification services may transfer data to the United States. These transfers are covered by the <strong>EU–US Data Privacy Framework</strong> and/or <strong>Standard Contractual Clauses</strong> approved by the European Commission.</p>
+
+      <h2>7. How long we keep data</h2>
+      <ul>
+        <li><strong>Driver account data</strong> — kept for as long as the account is active. After account deletion, kept up to <strong>5 years</strong> if needed to satisfy Greek tax or legal record-keeping obligations, otherwise erased.</li>
+        <li><strong>OTP codes</strong> — deleted immediately after use, or after 3 minutes if unused.</li>
+        <li><strong>JWT tokens</strong> — held only on the driver's device; cleared when the driver logs out or uninstalls the app.</li>
+        <li><strong>Driver live location</strong> — held in server memory only, deleted automatically after some time without an update.</li>
+        <li><strong>Passenger location coordinates sent during a ride request</strong> — used to find the nearest driver and discarded; never written to disk.</li>
+        <li><strong>Driving-licence and ΕΔΧ expiry dates</strong> — kept while the driver account is active, deleted together with the account.</li>
+        <li><strong>Server access logs</strong> — typically rotated within 30 days unless needed for incident investigation.</li>
+      </ul>
+
+      <h2>8. Your rights (GDPR)</h2>
+      <p>You can, at any time:</p>
+      <ul>
+        <li><strong>Access</strong> your personal data (Art. 15)</li>
+        <li><strong>Rectify</strong> inaccurate data (Art. 16)</li>
+        <li><strong>Erase</strong> your data — right to be forgotten (Art. 17)</li>
+        <li><strong>Restrict</strong> processing (Art. 18)</li>
+        <li><strong>Port</strong> your data to another provider (Art. 20)</li>
+        <li><strong>Object</strong> to processing based on legitimate interest (Art. 21)</li>
+        <li><strong>Withdraw consent</strong> at any time, where processing is based on consent</li>
+        <li><strong>Lodge a complaint</strong> with the <strong>Hellenic Data Protection Authority</strong> — <a href="https://www.dpa.gr">www.dpa.gr</a>, Kifissias 1-3, 11523 Athens, +30 210 6475600</li>
+      </ul>
+      <p>To exercise any right, use the <a href="https://go-fast.app/#contact">contact form on our website</a>. We respond within <strong>30 days</strong> at no cost.</p>
+
+      <h2>9. Security</h2>
+      <ul>
+        <li>All connections between the apps and the server use HTTPS/TLS.</li>
+        <li>Authentication is by short-lived signed tokens (JWT, HS256).</li>
+        <li>The PostgreSQL database is hosted in a private network, not exposed to the public internet.</li>
+      </ul>
+      <p>No system is 100% secure. If a personal-data breach occurs, we will notify the Hellenic DPA and affected users within 72 hours, as required by GDPR Art. 33–34.</p>
+
+      <h2>10. Children</h2>
+      <p>The Service is not directed at children under 16. We do not knowingly collect data from anyone under 16. If you believe a minor's data has been collected, contact us and we will delete it.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>We may update this Privacy Policy as the Service evolves (for example, when payments are added or when the operator forms a legal entity). Material changes will be communicated in-app or by email at least <strong>30 days</strong> in advance.</p>
+
+      <h2>12. Contact</h2>
+      <p>
+        George Lorentzos · Greece<br />
+        Contact: <a href="https://go-fast.app/#contact">contact form</a>
+      </p>
+    
+</div></main>
+
+<footer id="contact">
+    <div class="wrap">
+        <div class="foot-top">
+            <div class="foot-brand"><img loading="lazy" decoding="async" draggable="false" src="assets/images/brand/logo-white.png" alt="GoFast"></div>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://go-fast.app/privacy">Privacy Policy</a></li>
+                        <li><a href="https://go-fast.app/terms">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://go-fast.app/#contact">Send us a message</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Drivers</h4>
+                    <ul>
+                        <li><a href="https://go-fast.app/#contact">Apply to join</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>&copy; 2026 GoFast. All rights reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('mobileMenu');
+
+function setMenu(open) {
+    if (open === menu.classList.contains('open')) return;
+    menu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+}
+
+burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+
+// iOS Safari ignores user-scalable=no; block pinch zoom via gesture events.
+document.addEventListener('gesturestart', (e) => e.preventDefault());
+document.addEventListener('gesturechange', (e) => e.preventDefault());
+</script>
+
+</body>
+</html>

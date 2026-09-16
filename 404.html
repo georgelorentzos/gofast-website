@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>404 — Page Not Found | GoFast</title>
+<link rel="icon" type="image/png" href="assets/images/brand/mascot.png">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+html { scroll-behavior: smooth; scrollbar-width: none; background: #04A8D4; }
+html::-webkit-scrollbar { display: none; }
+img { -webkit-user-drag: none; user-select: none; }
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+/* ---------- nav ---------- */
+nav { position: sticky; top: 0; z-index: 110; background: #04A8D4; color: #fff; padding-top: env(safe-area-inset-top); }
+.nav-in {
+    display: flex; align-items: center;
+    height: 64px; gap: 36px;
+}
+.brand img { height: 30px; width: auto; }
+.nav-links { display: flex; gap: 28px; font-size: 14.5px; flex: 1; }
+.nav-links a { color: #ffffff; }
+.nav-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.nav-get {
+    background: #fff; color: #04A8D4;
+    font-size: 14.5px; font-weight: 500;
+    padding: 9px 18px; border-radius: 99px;
+}
+.nav-get:hover { background: #e8f7fc; }
+.nav-burger {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    padding: 8px; margin-left: auto;
+}
+.nav-burger span {
+    display: block; width: 22px; height: 2px; background: #fff;
+    margin: 5px 0; border-radius: 2px; transition: transform .25s, opacity .25s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+    position: fixed;
+    top: calc(64px + env(safe-area-inset-top));
+    left: 0; right: 0; bottom: 0;
+    z-index: 90;
+    background: #04A8D4;
+    touch-action: none;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+}
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .25s ease;
+}
+.mobile-menu a {
+    display: block; color: #fff; font-size: 20px; font-weight: 500;
+    padding: 14px 0;
+}
+.mobile-menu .mm-get {
+    margin-top: 20px;
+    background: #fff; color: #04A8D4;
+    text-align: center; font-weight: 700; font-size: 16px;
+    padding: 13px 36px; border-radius: 99px;
+}
+@media (max-width: 760px) {
+    .nav-links { display: none; }
+    .nav-get { display: none; }
+    .nav-burger { display: block; }
+}
+
+/* ---------- content ---------- */
+main { min-height: 100vh; display: flex; align-items: center; padding: 72px 0; background: #ffffff; }
+.code {
+    font-size: clamp(90px, 20vw, 160px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #04A8D4;
+    margin-bottom: 10px;
+}
+h1 { font-size: clamp(26px, 3.8vw, 40px); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 14px; }
+main p { color: #4b4b4b; font-size: 17px; max-width: 420px; margin-bottom: 36px; }
+.btn {
+    display: inline-block;
+    background: #000; color: #fff;
+    font-weight: 500; font-size: 16px;
+    padding: 14px 28px; border-radius: 8px;
+    transition: background .15s;
+}
+.btn:hover { background: #333; }
+
+/* ---------- footer ---------- */
+footer { background: #04A8D4; color: #fff; padding: 56px 0 calc(32px + env(safe-area-inset-bottom)); }
+.foot-top { display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap; padding-bottom: 40px; }
+.foot-brand img { height: 34px; width: auto; }
+.foot-cols { display: flex; gap: 80px; flex-wrap: wrap; }
+.foot-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+.foot-col ul { list-style: none; }
+.foot-col li { margin-bottom: 12px; }
+.foot-col a { color: rgba(255,255,255,.85); font-size: 14px; }
+.foot-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.foot-bottom {
+    border-top: 1px solid rgba(255,255,255,.28);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    font-size: 13px; color: rgba(255,255,255,.85);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="wrap nav-in">
+        <a class="brand" href="https://go-fast.app/"><img decoding="async" draggable="false" src="assets/images/brand/logo-white.png" alt="GoFast"></a>
+        <div class="nav-links">
+            <a href="https://go-fast.app/#drivers">Drivers</a>
+            <a href="https://go-fast.app/#how">How it works</a>
+            <a href="https://go-fast.app/app/download.html">Download</a>
+            <a href="https://go-fast.app/#contact">Contact</a>
+        </div>
+        <a class="nav-get" href="https://go-fast.app/app/download.html">Get the app</a>
+        <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <aside class="mobile-menu" id="mobileMenu" aria-label="Menu">
+        <a href="https://go-fast.app/#drivers">Drivers</a>
+        <a href="https://go-fast.app/#how">How it works</a>
+        <a href="https://go-fast.app/app/download.html">Download</a>
+        <a href="https://go-fast.app/#contact">Contact</a>
+        <a class="mm-get" href="https://go-fast.app/app/download.html">Get the app</a>
+    </aside>
+</nav>
+
+
+<main>
+    <div class="wrap">
+        <div class="code">404</div>
+        <h1>Wrong turn somewhere</h1>
+        <p>The page you're looking for took a different route. Let's get you back on track.</p>
+        <a class="btn" href="https://go-fast.app/">Back to home</a>
+    </div>
+</main>
+
+<footer id="contact">
+    <div class="wrap">
+        <div class="foot-top">
+            <div class="foot-brand"><img loading="lazy" decoding="async" draggable="false" src="assets/images/brand/logo-white.png" alt="GoFast"></div>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://go-fast.app/privacy">Privacy Policy</a></li>
+                        <li><a href="https://go-fast.app/terms">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://go-fast.app/#contact">Send us a message</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Drivers</h4>
+                    <ul>
+                        <li><a href="https://go-fast.app/#contact">Apply to join</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>&copy; 2026 GoFast. All rights reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('mobileMenu');
+
+function setMenu(open) {
+    if (open === menu.classList.contains('open')) return;
+    menu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+}
+
+burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+
+// iOS Safari ignores user-scalable=no; block pinch zoom via gesture events.
+document.addEventListener('gesturestart', (e) => e.preventDefault());
+document.addEventListener('gesturechange', (e) => e.preventDefault());
+</script>
+
+</body>
+</html>
