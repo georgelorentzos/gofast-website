@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>404 — Page Not Found | GoFast</title>
+<title>Contact GoFast</title>
 <link rel="icon" type="image/png" href="assets/images/brand/mascot.png">
-<meta name="robots" content="noindex">
+<meta name="description" content="Contact GoFast. Questions, feedback, or want to join as a driver? Send us a message and we will get back to you.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -94,18 +95,28 @@ nav { position: sticky; top: 0; z-index: 110; background: #04A8D4; color: #fff; 
     .nav-burger { display: block; }
 }
 
-/* ---------- content ---------- */
-main { min-height: 100vh; display: flex; align-items: center; padding: 72px 0; background: #ffffff; }
-.code {
-    font-size: clamp(90px, 20vw, 160px);
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    color: #04A8D4;
-    margin-bottom: 10px;
+/* ---------- contact ---------- */
+main { flex: 1; display: flex; align-items: center; background: #f6f6f6; padding: 88px 0; min-height: 100vh; min-height: 100dvh; }
+.contact-in { display: flex; align-items: center; justify-content: center; gap: 88px; }
+.contact-copy { flex: 0 1 520px; width: 100%; }
+.contact-sub { color: #4b4b4b; margin-bottom: 28px; font-size: 16.5px; max-width: 480px; }
+main h1 { font-size: clamp(28px, 3.8vw, 40px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; margin-bottom: 18px; }
+.contact-img { flex: 0 0 auto; display: flex; justify-content: center; }
+.contact-img img { width: 100%; max-width: 440px; border-radius: 24px; }
+#contactForm { display: flex; flex-direction: column; gap: 14px; }
+.cf-input {
+    width: 100%; border: none; border-radius: 12px;
+    background: #fff; padding: 14px 16px; font: inherit; font-size: 15px;
+    color: #000; outline: none;
 }
-h1 { font-size: clamp(26px, 3.8vw, 40px); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 14px; }
-main p { color: #4b4b4b; font-size: 17px; max-width: 420px; margin-bottom: 36px; }
+.cf-msg { min-height: 140px; resize: vertical; }
+.cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+#cfSend { align-self: flex-start; border: none; cursor: pointer; font-family: inherit; }
+#cfSend:disabled { opacity: .6; cursor: default; }
+.cf-status { font-size: 14px; }
+.cf-status:empty { display: none; }
+.cf-status.ok { color: #15803d; }
+.cf-status.err { color: #dc2626; }
 .btn {
     display: inline-block;
     background: #000; color: #fff;
@@ -114,6 +125,12 @@ main p { color: #4b4b4b; font-size: 17px; max-width: 420px; margin-bottom: 36px;
     transition: background .15s;
 }
 .btn:hover { background: #333; }
+@media (max-width: 860px) {
+    main { padding: 64px 0; }
+    .contact-in { flex-direction: column; gap: 36px; }
+    .contact-copy { flex: 0 0 auto; }
+    .contact-img { display: none; }
+}
 
 /* ---------- footer ---------- */
 footer { background: #04A8D4; color: #fff; padding: 56px 0 calc(32px + env(safe-area-inset-bottom)); }
@@ -160,11 +177,22 @@ footer { background: #04A8D4; color: #fff; padding: 56px 0 calc(32px + env(safe-
 
 
 <main>
-    <div class="wrap">
-        <div class="code">404</div>
-        <h1>Wrong turn somewhere</h1>
-        <p>The page you're looking for took a different route. Let's get you back on track.</p>
-        <a class="btn" href="https://go-fast.app/">Back to home</a>
+    <div class="wrap contact-in">
+        <div class="contact-copy">
+        <h1>Contact us</h1>
+        <p class="contact-sub">Questions, feedback, or want to join as a driver? Send us a message and we will get back to you.</p>
+        <form id="contactForm" novalidate>
+            <input class="cf-input" type="text" id="cfName" placeholder="Name" maxlength="100" required>
+            <input class="cf-input" type="email" id="cfEmail" placeholder="Email" maxlength="255">
+            <textarea class="cf-input cf-msg" id="cfMessage" placeholder="Message" maxlength="2000" required></textarea>
+            <input class="cf-hp" type="text" id="cfWebsite" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn" type="submit" id="cfSend">Send message</button>
+            <p class="cf-status" id="cfStatus" role="status"></p>
+        </form>
+        </div>
+        <div class="contact-img">
+            <img loading="lazy" decoding="async" draggable="false" src="assets/images/promo/support-team.webp" alt="GoFast support team wearing headsets, ready to help">
+        </div>
     </div>
 </main>
 
@@ -212,6 +240,39 @@ function setMenu(open) {
 }
 
 burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+
+const cForm = document.getElementById('contactForm');
+const cStatus = document.getElementById('cfStatus');
+cForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('cfName').value.trim();
+    const email = document.getElementById('cfEmail').value.trim();
+    const message = document.getElementById('cfMessage').value.trim();
+    cStatus.className = 'cf-status';
+    if (name.length < 2) { cStatus.textContent = 'Please enter your name.'; cStatus.classList.add('err'); return; }
+    if (message.length < 10) { cStatus.textContent = 'Please write a longer message (at least 10 characters).'; cStatus.classList.add('err'); return; }
+    const btn = document.getElementById('cfSend');
+    btn.disabled = true; btn.textContent = 'Sending\u2026';
+    try {
+        const res = await fetch('https://api.go-fast.app/admin/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message, website: document.getElementById('cfWebsite').value })
+        });
+        const data = await res.json().catch(() => null);
+        if (res.ok && data && data.success) {
+            cForm.reset();
+            cStatus.textContent = 'Message sent. Thank you!';
+            cStatus.classList.add('ok');
+        } else {
+            cStatus.textContent = (data && data.detail) || 'Something went wrong. Please try again.';
+            cStatus.classList.add('err');
+        }
+    } finally {
+        if (!cStatus.textContent) { cStatus.textContent = 'Network error. Please try again.'; cStatus.classList.add('err'); }
+        btn.disabled = false; btn.textContent = 'Send message';
+    }
+});
 
 // iOS Safari ignores user-scalable=no; block pinch zoom via gesture events.
 document.addEventListener('gesturestart', (e) => e.preventDefault());
